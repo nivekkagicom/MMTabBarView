@@ -19,7 +19,11 @@
 
     self = [super initWithFrame:frameRect];
     if (self) {
+#if NEVER
         self.focusRingType = NSFocusRingTypeNone;
+#else
+		self.focusRingType = NSFocusRingTypeDefault;
+#endif
     }
     
     return self;
@@ -101,7 +105,14 @@
     
     NSPoint mouseLocation = [self convertPoint:mouseLocationInWindowCoos fromView:nil];
     
-    [[self cell] addTrackingAreasForView:self inRect:[self bounds] withUserInfo:nil mouseLocation:mouseLocation];   
+    [[self cell] addTrackingAreasForView:self inRect:[self bounds] withUserInfo:nil mouseLocation:mouseLocation];
+#if NEVER
+#else
+	
+	if ([self mouse:mouseLocation inRect:[self bounds]]) {
+		[[self cell] mouseEntered:nil];
+	}
+#endif
 }
 
 - (void)mouseEntered:(NSEvent *)theEvent {

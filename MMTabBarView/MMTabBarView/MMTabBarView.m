@@ -28,6 +28,13 @@
 #import "MMSlideButtonsAnimation.h"
 #import "NSView+MMTabBarViewExtensions.h"
 #import "MMTabBarItem.h"
+#if NEVER
+#else
+#import "MacVectorAATabStyle.h"
+#import "MacVectorCOTabStyle.h"
+#import "MacVectorNATabStyle.h"
+#import "MacVectorTRTabStyle.h"
+#endif
 
 #define DIVIDER_WIDTH 3
 
@@ -351,6 +358,13 @@ static NSMutableDictionary *registeredStyleClasses = nil;
     [self registerTabStyleClass:[MMCardTabStyle class]];
     [self registerTabStyleClass:[MMLiveChatTabStyle class]];
     [self registerTabStyleClass:[MMSafariTabStyle class]];
+#if NEVER
+#else
+    [self registerTabStyleClass:[MacVectorAATabStyle class]];
+	[self registerTabStyleClass:[MacVectorCOTabStyle class]];
+    [self registerTabStyleClass:[MacVectorNATabStyle class]];
+	[self registerTabStyleClass:[MacVectorTRTabStyle class]];
+#endif
 }
 
 + (void)registerTabStyleClass:(Class <MMTabStyle>)aStyleClass {
@@ -429,6 +443,12 @@ static NSMutableDictionary *registeredStyleClasses = nil;
 
 - (void)removeTabViewItem:(NSTabViewItem *)anItem {
     [_tabView removeTabViewItem:anItem];
+//+Issue #16
+	MMAttachedTabBarButton* button = [self attachedButtonForTabViewItem:anItem];
+	if (button) {
+		[self removeAttachedButton:button synchronizeTabViewItems:YES];
+	}
+//-Issue #16
 }
 
 - (NSTabViewItem *)tabViewItemPinnedToOverflowButton {
@@ -2504,7 +2524,11 @@ static NSMutableDictionary *registeredStyleClasses = nil;
                 //the resize widgets are larger on metal windows
 			_resizeAreaCompensation = [window styleMask] & NSTexturedBackgroundWindowMask ? 20 : 8;
 		} else {
+#if NEVER
 			_resizeAreaCompensation = 0;
+#else
+			_resizeAreaCompensation = 20;
+#endif
 		}
 	}
 }

@@ -42,6 +42,17 @@
 
     [super drawImage:image withFrame:frame inView:controlView];
 }
+#if NEVER
+#else
+
+- (void)drawFocusRingMaskWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
+	NSRectFill([self titleRectForBounds:cellFrame]);
+}
+
+- (NSRect)focusRingMaskBoundsForFrame:(NSRect)cellFrame inView:(NSView *)controlView {
+	return [self titleRectForBounds:cellFrame];
+}
+#endif
 
 #pragma mark -
 #pragma mark Accessors

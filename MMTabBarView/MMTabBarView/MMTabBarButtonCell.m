@@ -591,8 +591,16 @@
 	NSRange range = NSMakeRange(0, [contents length]);
 
 	[attrStr addAttribute:NSFontAttributeName value:[NSFont systemFontOfSize:11.0] range:range];
+#if NEVER
 	[attrStr addAttribute:NSForegroundColorAttributeName value:[NSColor controlTextColor] range:range];
-    
+#else
+	if ([[self controlView] window] == [NSApp mainWindow]) {
+		[attrStr addAttribute:NSForegroundColorAttributeName value:[NSColor controlTextColor] range:range];
+	} else {
+		[attrStr addAttribute:NSForegroundColorAttributeName value:[NSColor disabledControlTextColor] range:range];
+	}
+#endif
+	
 	// Paragraph Style for Truncating Long Text
 	static NSMutableParagraphStyle *truncatingTailParagraphStyle = nil;
 	if (!truncatingTailParagraphStyle) {
@@ -1086,8 +1094,12 @@
     [NSGraphicsContext saveGraphicsState];
     
     NSShadow *shadow = [[NSShadow alloc] init];
+#if NEVER
     [shadow setShadowColor:[[NSColor whiteColor] colorWithAlphaComponent:0.4]];
-    [shadow setShadowBlurRadius:1.0];
+#else
+    [shadow setShadowColor:[[NSColor whiteColor] colorWithAlphaComponent:0.6]];
+#endif
+	[shadow setShadowBlurRadius:1.0];
     [shadow setShadowOffset:NSMakeSize(0.0, -1.0)];
     [shadow set];
 

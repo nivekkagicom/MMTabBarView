@@ -158,7 +158,8 @@ NSString *kMMTabBarButtonOberserverContext = @"MMTabBarView.MMTabBarButton.Obser
 #pragma mark -
 #pragma mark Interfacing Cell
 
-    // Overidden method of superclass.
+#if NEVER
+// Overidden method of superclass.
     // Note: We use standard binding for title property.
     // Standard binding uses a binding adaptor we cannot access.
     // That means though title property is bound, our -observeValueForKeyPath:ofObject:change:context: will not called
@@ -177,6 +178,7 @@ NSString *kMMTabBarButtonOberserverContext = @"MMTabBarView.MMTabBarButton.Obser
         }
     
 }  // -setTitle:
+#endif
 
 - (id <MMTabStyle>)style {
     return [[self cell] style];
@@ -292,6 +294,7 @@ NSString *kMMTabBarButtonOberserverContext = @"MMTabBarView.MMTabBarButton.Obser
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context 
 {
     [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+#if NEVER
     
     if (context == kMMTabBarButtonOberserverContext)
         {
@@ -303,7 +306,8 @@ NSString *kMMTabBarButtonOberserverContext = @"MMTabBarView.MMTabBarButton.Obser
                 }];
             }
         }
- 
+
+#endif
 }  // -observeValueForKeyPath:ofObject:change:context:
 
 #pragma mark -
