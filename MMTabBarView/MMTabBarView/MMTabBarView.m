@@ -323,7 +323,7 @@ static NSMutableDictionary *registeredStyleClasses = nil;
     else if ([window isKindOfClass:[NSPanel class]] && [NSApp isActive]) {
         windowActive = YES;
     }
-    else if (window.attachedSheet != nil) {
+    else if ([window isMainWindow]) {
         // Don't gray out the tab bar if we're displaying a sheet.
         windowActive = YES;
     }
