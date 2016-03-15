@@ -29,6 +29,7 @@
 #define kMMObjectCounterRadius          7.0
 #define kMMTabBarViewSourceListHeight   28
 
+#if NEVER
 #define StaticImage(name) \
 static NSImage* _static##name##Image() \
 { \
@@ -37,6 +38,18 @@ static NSImage* _static##name##Image() \
         image = [[NSImage alloc] initByReferencingFile:[[MMTabBarView bundle] pathForImageResource:@#name]]; \
     return image; \
 }
+#else
+NSImage* CreateOSVersionedImage(NSString* const inName);
+
+#define StaticImage(name) \
+static NSImage* _static##name##Image() \
+{ \
+    static NSImage* image = nil; \
+    if (!image) \
+        image = CreateOSVersionedImage(@#name); \
+    return image; \
+}
+#endif
 
 @class MMOverflowPopUpButton;
 @class MMRolloverButton;
@@ -141,6 +154,10 @@ typedef enum MMAttachedButtonsEnumerationOptions : NSUInteger {
 - (CGFloat)availableWidthForButtons;
 - (CGFloat)availableHeightForButtons;
 - (NSRect)genericButtonRect;
+#if NEVER
+#else
+- (BOOL)isKeyWindow;
+#endif
 - (BOOL)isWindowActive;
 - (BOOL)allowsDetachedDraggingOfTabViewItem:(NSTabViewItem *)anItem;
 

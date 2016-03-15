@@ -51,7 +51,11 @@
 		  @"130", @"TabOptimalWidth",
 		  [NSNumber numberWithBool:YES], @"UseOverflowMenu",
           [NSNumber numberWithBool:YES], @"AllowBackgroundClosing",
-		  nil]];
+#if NEVER
+#else
+          [NSNumber numberWithBool:YES], @"UseSystemDependentTabStyle",
+#endif
+          nil]];
 
 	// toolbar
 	NSToolbar *toolbar = [[NSToolbar alloc] initWithIdentifier:@"DemoToolbar"];

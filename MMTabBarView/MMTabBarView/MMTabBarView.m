@@ -38,6 +38,24 @@
 
 #define DIVIDER_WIDTH 3
 
+#if NEVER
+#else
+NSImage* CreateOSVersionedImage(NSString* const inName) {
+	if ([NSUserDefaults.standardUserDefaults boolForKey:@"UseSystemDependentTabStyle"]) {
+        if ([NSProcessInfo.processInfo respondsToSelector:@selector(isOperatingSystemAtLeastVersion:)]) {
+            NSOperatingSystemVersion const useYosemiteTabStyleVersion = { 10, 10, 0 };
+            if ([NSProcessInfo.processInfo isOperatingSystemAtLeastVersion:useYosemiteTabStyleVersion]) {
+				NSURL* const url = [[MMTabBarView bundle] URLForImageResource:[inName stringByAppendingString:@"Yosemite"]];
+				NSImage* const image = [[NSImage alloc] initByReferencingURL:url];
+				if (image != nil) {
+					return image;
+				}
+			}
+		}
+	}
+	return [[NSImage alloc] initByReferencingURL:[[MMTabBarView bundle] URLForImageResource:inName]];
+}
+#endif
 @interface MMTabBarView (/*Private*/)
 
 @property (assign) BOOL isReorderingTabViewItems;
@@ -200,6 +218,11 @@ static NSMutableDictionary *registeredStyleClasses = nil;
     
 		[center addObserver:self selector:@selector(windowStatusDidChange:) name:NSWindowDidBecomeKeyNotification object:aWindow];
 		[center addObserver:self selector:@selector(windowStatusDidChange:) name:NSWindowDidResignKeyNotification object:aWindow];
+#if NEVER
+#else
+		[center addObserver:self selector:@selector(windowStatusDidChange:) name:NSWindowDidBecomeMainNotification object:aWindow];
+		[center addObserver:self selector:@selector(windowStatusDidChange:) name:NSWindowDidResignMainNotification object:aWindow];
+#endif
 		[center addObserver:self selector:@selector(windowDidMove:) name:NSWindowDidMoveNotification object:aWindow];
         
         [aWindow addObserver:self forKeyPath:@"toolbar.visible" options:NSKeyValueObservingOptionNew context:NULL];
@@ -315,6 +338,26 @@ static NSMutableDictionary *registeredStyleClasses = nil;
 	aRect.size.height = [self heightOfTabBarButtons];
 	return aRect;
 }
+#if NEVER
+#else
+- (BOOL)isKeyWindow {
+	NSWindow* const window = self.window;
+	if (![NSUserDefaults.standardUserDefaults boolForKey:@"UseSystemDependentTabStyle"]) {
+		return NO;
+	}
+    if (![NSProcessInfo.processInfo respondsToSelector:@selector(isOperatingSystemAtLeastVersion:)]) {
+        return NO;
+    }
+    NSOperatingSystemVersion const useYosemiteTabStyleVersion = { 10, 10, 0 };
+    if (![NSProcessInfo.processInfo isOperatingSystemAtLeastVersion:useYosemiteTabStyleVersion]) {
+		return NO;
+	}
+	if ([NSUserDefaults.standardUserDefaults boolForKey:@"UseSystemKeyWindowTabStyle"]) {
+		return YES;
+	}
+	return window.isKeyWindow;
+}
+#endif
 
 - (BOOL)isWindowActive {
     NSWindow *window = [self window];
