@@ -8,13 +8,13 @@
 #import "MMRolloverButtonCell.h"
 
 @implementation MMRolloverButtonCell
+{
+    MMRolloverButtonType _rolloverButtonType;
+}
 
-@synthesize mouseHovered = _mouseHovered;
-@synthesize rolloverImage = _rolloverImage;
 @dynamic rolloverButtonType;
-@synthesize simulateClickOnMouseHovered = _simulateClickOnMouseHovered;
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -27,8 +27,7 @@
 
 - (void)dealloc
 {
-    [_rolloverImage release], _rolloverImage = nil;
-    [super dealloc];
+    _rolloverImage = nil;
 }
 
 - (void)drawImage:(NSImage *)image withFrame:(NSRect)frame inView:(NSView *)controlView {
@@ -42,7 +41,7 @@
 
     [super drawImage:image withFrame:frame inView:controlView];
 }
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 #else
 
 - (void)drawFocusRingMaskWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
@@ -101,7 +100,7 @@
     // We make the view the owner, and it delegates the calls back to the cell after it is properly setup for the corresponding row/column in the outlineview
     area = [[NSTrackingArea alloc] initWithRect:cellFrame options:options owner:controlView userInfo:userInfo];
     [controlView addTrackingArea:area];
-    [area release], area = nil;
+    area = nil;
 }
 
 - (void)mouseEntered:(NSEvent *)event {
@@ -133,11 +132,11 @@
 	}
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
 	self = [super initWithCoder:aDecoder];
 	if (self) {
 		if ([aDecoder allowsKeyedCoding]) {
-            _rolloverImage = [[aDecoder decodeObjectForKey:@"rolloverImage"] retain];
+            _rolloverImage = [aDecoder decodeObjectForKey:@"rolloverImage"];
             _simulateClickOnMouseHovered = [aDecoder decodeIntegerForKey:@"simulateClickOnMouseHovered"];
             _rolloverButtonType = [aDecoder decodeIntegerForKey:@"rolloverButtonType"];
 		}
@@ -154,7 +153,7 @@
     if (cellCopy) {
         cellCopy->_rolloverButtonType = _rolloverButtonType;
         cellCopy->_simulateClickOnMouseHovered = _simulateClickOnMouseHovered;
-        cellCopy->_rolloverImage = [_rolloverImage retain];
+        cellCopy->_rolloverImage = _rolloverImage;
     }
     
     return cellCopy;    

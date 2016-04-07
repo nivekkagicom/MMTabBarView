@@ -11,23 +11,13 @@
 #import "MMTabBarView.h"
 #import "MMAttachedTabBarButton.h"
 #import "NSView+MMTabBarViewExtensions.h"
-
-@interface MMTabBarView(SharedPrivates)
-
-- (NSRect)_addTabButtonRect;
-- (NSRect)_overflowButtonRect;
-
-@end
-
-@interface MMTabBarButtonCell(SharedPrivates)
-
-- (NSRect)_closeButtonRectForBounds:(NSRect)theRect;
-- (CGFloat)_leftMargin;
-- (CGFloat)_rightMargin;
-
-@end
+#import "MMTabBarView.Private.h"
+#import "MMTabBarButtonCell.Private.h"
 
 @implementation MMSafariTabStyle
+{
+	NSDictionary *_objectCountStringAttributes;
+}
 
 StaticImage(SafariAWATClose)
 StaticImage(SafariAWATClosePressed)
@@ -47,7 +37,7 @@ StaticImage(TabClose_Dirty_Rollover)
 StaticImage(SafariAWAddTabButton)
 StaticImage(SafariAWAddTabButtonPushed)
 StaticImage(SafariAWAddTabButtonRolloverPlus)
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 #else
 StaticImage(SafariKWATFill)
 StaticImage(SafariKWATLeftCap)
@@ -57,7 +47,7 @@ StaticImage(SafariAWATFill)
 StaticImage(SafariAWATLeftCap)
 StaticImage(SafariAWATRightCap)
 StaticImage(SafariAWBG)
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 #else
 StaticImage(SafariKWITLeftCap)
 StaticImage(SafariKWITRightCap)
@@ -78,7 +68,7 @@ StaticImage(SafariIWITRightCap)
 - (NSString *)name {
 	return [[self class] name];
 }
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 #else
 
 - (NSImage*) imageForTag:(NSInteger) inTag {
@@ -165,7 +155,7 @@ StaticImage(SafariIWITRightCap)
 #pragma mark -
 #pragma mark Creation/Destruction
 
-- (id) init {
+- (instancetype) init {
 	if((self = [super init])) {
 		_objectCountStringAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:[[NSFontManager sharedFontManager] convertFont:[NSFont fontWithName:@"Helvetica" size:11.0] toHaveTrait:NSBoldFontMask], NSFontAttributeName,
 										[[NSColor whiteColor] colorWithAlphaComponent:0.85], NSForegroundColorAttributeName,
@@ -175,9 +165,8 @@ StaticImage(SafariIWITRightCap)
 }
 
 - (void)dealloc {
-	[_objectCountStringAttributes release], _objectCountStringAttributes = nil;
+	_objectCountStringAttributes = nil;
 
-	[super dealloc];
 }
 
 #pragma mark -
@@ -218,7 +207,7 @@ StaticImage(SafariIWITRightCap)
 
 -(void)updateAddButton:(MMRolloverButton *)aButton ofTabBarView:(MMTabBarView *)tabBarView {
 
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
     [aButton setImage:_staticSafariAWAddTabButtonImage()];
     [aButton setAlternateImage:_staticSafariAWAddTabButtonPushedImage()];
     [aButton setRolloverImage:_staticSafariAWAddTabButtonRolloverPlusImage()];
@@ -266,7 +255,7 @@ StaticImage(SafariIWITRightCap)
 {
     BOOL activeWindow = [[[cell controlView] enclosingTabBarView] isWindowActive];
     BOOL activeTab = ([cell state] == NSOnState);
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 #else
 	BOOL keyWindow = [cell controlView].enclosingTabBarView.isKeyWindow;
 #endif
@@ -274,7 +263,7 @@ StaticImage(SafariIWITRightCap)
     if (activeWindow) {
         switch (type) {
             case MMCloseButtonImageTypeStandard:
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 				return activeTab?_staticSafariAWATCloseImage():_staticSafariAWITCloseImage();
 #else
 				if (keyWindow) {
@@ -283,7 +272,7 @@ StaticImage(SafariIWITRightCap)
 				return activeTab ? IMAGE(kAWATClose) : IMAGE(kAWITClose);
 #endif
             case MMCloseButtonImageTypeRollover:
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 return activeTab?_staticSafariAWATCloseRolloverImage():_staticSafariAWITCloseRolloverImage();
 #else
 				if (keyWindow) {
@@ -292,7 +281,7 @@ StaticImage(SafariIWITRightCap)
                 return activeTab ? IMAGE(kAWATCloseRollover) : IMAGE(kAWITCloseRollover);
 #endif
             case MMCloseButtonImageTypePressed:
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 return activeTab?_staticSafariAWATClosePressedImage():_staticSafariAWITClosePressedImage();
 #else
 				if (keyWindow) {
@@ -314,19 +303,19 @@ StaticImage(SafariIWITRightCap)
     } else {
         switch (type) {
             case MMCloseButtonImageTypeStandard:
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 return activeTab?_staticSafariIWATCloseImage():_staticSafariIWITCloseImage();
 #else
                 return activeTab?IMAGE(kIWATClose):IMAGE(kIWITClose);
 #endif
             case MMCloseButtonImageTypeRollover:
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 return activeTab?_staticSafariIWATCloseRolloverImage():_staticSafariIWITCloseRolloverImage();
 #else
                 return activeTab?IMAGE(kIWATCloseRollover):IMAGE(kIWITCloseRollover);
 #endif
             case MMCloseButtonImageTypePressed:
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 return activeTab?_staticSafariIWATClosePressedImage():_staticSafariIWITClosePressedImage();
 #else
                 return activeTab?IMAGE(kIWATClosePressed):IMAGE(kIWITClosePressed);
@@ -404,7 +393,7 @@ StaticImage(SafariIWITRightCap)
         [[NSColor darkGrayColor] set];
         NSRectFillUsingOperation(rect, NSCompositeSourceOver);
     } else {
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
         NSImage *bg = [tabBarView isWindowActive] ? _staticSafariAWBGImage() : _staticSafariIWBGImage();
 #else
 		NSImage *bg = [tabBarView isWindowActive] ? tabBarView.isKeyWindow ? IMAGE(kKWBG) : IMAGE(kAWBG) : IMAGE(kIWBG);
@@ -438,7 +427,7 @@ StaticImage(SafariIWITRightCap)
         // standard drawing while animated slide is going on
     if ([button isInAnimatedSlide] == YES) {
         
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
         left = _staticSafariAWITLeftCapImage();
         right = _staticSafariAWITRightCapImage();
 #else
@@ -455,7 +444,7 @@ StaticImage(SafariIWITRightCap)
     } else if ([button state] == NSOnState) {
     
         if ([tabBarView isWindowActive]) {
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
             left = _staticSafariAWATLeftCapImage();
             center = _staticSafariAWATFillImage();
 #else
@@ -468,13 +457,13 @@ StaticImage(SafariIWITRightCap)
 			}
 #endif
             if (![button isOverflowButton] || [button isSliding])
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 right = _staticSafariAWATRightCapImage();
 #else
 				right = tabBarView.isKeyWindow ? IMAGE(kKWATRightCap) : IMAGE(kAWATRightCap);
 #endif
         } else {
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
             left = _staticSafariIWATLeftCapImage();
             center = _staticSafariIWATFillImage();
 #else
@@ -482,7 +471,7 @@ StaticImage(SafariIWITRightCap)
             center = IMAGE(kIWATFill);
 #endif
             if (![button isOverflowButton] || [button isSliding])
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 right = _staticSafariIWATRightCapImage();
 #else
                 right = IMAGE(kIWATRightCap);
@@ -494,7 +483,7 @@ StaticImage(SafariIWITRightCap)
     
         if (selIndex == NSNotFound || index < selIndex) {
             if ([nextButton isSliding] || [tabBarView destinationIndexForDraggedItem] == index+1)
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 right = isWindowActive?_staticSafariAWITRightCapImage():_staticSafariIWITRightCapImage();
 #else
 				right = isWindowActive ? tabBarView.isKeyWindow ? IMAGE(kKWITRightCap) : IMAGE(kAWITRightCap) : IMAGE(kIWITRightCap);
@@ -505,7 +494,7 @@ StaticImage(SafariIWITRightCap)
 
         if (selIndex == NSNotFound || index > selIndex) {
             if (selIndex == NSNotFound || [prevButton isSliding] || [tabBarView destinationIndexForDraggedItem]+1 == index)
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 left = isWindowActive?_staticSafariAWITLeftCapImage():_staticSafariIWITLeftCapImage();
 #else
 				left = isWindowActive ? tabBarView.isKeyWindow ? IMAGE(kKWITLeftCap) : IMAGE(kAWITLeftCap) : IMAGE(kIWITLeftCap);
@@ -513,7 +502,7 @@ StaticImage(SafariIWITRightCap)
         }
         
         if ([tabBarView showAddTabButton] && ![tabBarView isOverflowButtonVisible])
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
             right = isWindowActive?_staticSafariAWITRightCapImage():_staticSafariIWITRightCapImage();
 #else
 			right = isWindowActive ? tabBarView.isKeyWindow ? IMAGE(kKWITRightCap) : IMAGE(kAWITRightCap) : IMAGE(kIWITRightCap);
@@ -523,25 +512,25 @@ StaticImage(SafariIWITRightCap)
     } else {
     
         if (selIndex == NSNotFound || index < selIndex) {
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
             left = isWindowActive?_staticSafariAWITLeftCapImage():_staticSafariIWITLeftCapImage();
 #else
 			left = isWindowActive ? tabBarView.isKeyWindow ? IMAGE(kKWITLeftCap) : IMAGE(kAWITLeftCap) : IMAGE(kIWITLeftCap);
 #endif
             if ([nextButton isSliding] || [tabBarView destinationIndexForDraggedItem] == index+1)
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 right = isWindowActive?_staticSafariAWITRightCapImage():_staticSafariIWITRightCapImage();
 #else
 				right = isWindowActive ? tabBarView.isKeyWindow ? IMAGE(kKWITRightCap) : IMAGE(kAWITRightCap) : IMAGE(kIWITRightCap);
 #endif
         } else if (index > selIndex) {
             if ([prevButton isSliding])
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 left = isWindowActive?_staticSafariAWITLeftCapImage():_staticSafariIWITLeftCapImage();
 #else
 				left = isWindowActive ? tabBarView.isKeyWindow ? IMAGE(kKWITLeftCap) : IMAGE(kAWITLeftCap) : IMAGE(kIWITLeftCap);
 #endif
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
             right = isWindowActive?_staticSafariAWITRightCapImage():_staticSafariIWITRightCapImage();
 #else
 			right = isWindowActive ? tabBarView.isKeyWindow ? IMAGE(kKWITRightCap) : IMAGE(kAWITRightCap) : IMAGE(kIWITRightCap);
@@ -555,7 +544,7 @@ StaticImage(SafariIWITRightCap)
 
 -(void)drawBezelOfOverflowButton:(MMOverflowPopUpButton *)overflowButton ofTabBarView:(MMTabBarView *)tabBarView inRect:(NSRect)rect {
     BOOL isWindowActive = [tabBarView isWindowActive];
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 #else
 	BOOL isKeyWindow = tabBarView.isKeyWindow;
 #endif
@@ -576,7 +565,7 @@ StaticImage(SafariIWITRightCap)
         displaySelected = NO;
     
     if (displaySelected) {
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
         center = isWindowActive?_staticSafariAWATFillImage():_staticSafariIWATFillImage();
         right = isWindowActive?_staticSafariAWATRightCapImage():_staticSafariIWATRightCapImage();
 #else
@@ -585,7 +574,7 @@ StaticImage(SafariIWITRightCap)
 #endif
         
     } else {
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
         right = isWindowActive?_staticSafariAWITRightCapImage():_staticSafariIWITRightCapImage();
 #else
 		right = isWindowActive ? isKeyWindow ? IMAGE(kKWITRightCap) : IMAGE(kAWITRightCap) : IMAGE(kIWITRightCap);
@@ -615,7 +604,7 @@ StaticImage(SafariIWITRightCap)
 
     if ([tabBarView isWindowActive]) {
         if ([cell state] == NSOnState) {
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
             left = _staticSafariAWATLeftCapImage();
             center = _staticSafariAWATFillImage();
 #else
@@ -628,7 +617,7 @@ StaticImage(SafariIWITRightCap)
 			}
 #endif
             if (![(MMAttachedTabBarButtonCell *)cell isOverflowButton] || [button isSliding])
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 right = _staticSafariAWATRightCapImage();
 #else
 				right = tabBarView.isKeyWindow ? IMAGE(kKWATRightCap) : IMAGE(kAWATRightCap);
@@ -637,7 +626,7 @@ StaticImage(SafariIWITRightCap)
     } else {
     
         if ([cell state] == NSOnState) {
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
             left = _staticSafariIWATLeftCapImage();
             center = _staticSafariIWATFillImage();
 #else
@@ -645,7 +634,7 @@ StaticImage(SafariIWITRightCap)
             center = IMAGE(kIWATFill);
 #endif
             if (![(MMAttachedTabBarButtonCell *)cell isOverflowButton] || [button isSliding])
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
                 right = _staticSafariIWATRightCapImage();
 #else
                 right = IMAGE(kIWATRightCap);

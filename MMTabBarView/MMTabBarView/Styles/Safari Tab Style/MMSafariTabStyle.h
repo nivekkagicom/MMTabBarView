@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MMTabStyle.h"
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 #else
 
 enum {
@@ -60,12 +60,8 @@ enum {
 
 #endif
 
-@interface MMSafariTabStyle : NSObject <MMTabStyle> {
-
-	NSDictionary* _objectCountStringAttributes;
-    
-}
-#if NEVER
+@interface MMSafariTabStyle : NSObject <MMTabStyle>
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 #else
 
 - (NSImage*) imageForTag:(NSInteger) inTag;

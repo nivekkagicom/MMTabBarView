@@ -26,28 +26,24 @@ NSString *kMMTabBarButtonOberserverContext = @"MMTabBarView.MMTabBarButton.Obser
 
 @implementation MMTabBarButton
 
-@synthesize stackingFrame = _stackingFrame;
-@synthesize closeButton = _closeButton;
-@dynamic closeButtonAction;
-@synthesize indicator = _indicator;
-
-+ (void)initialize {
-    [super initialize];
-    
-    [self exposeBinding:@"isProcessing"];
-    [self exposeBinding:@"isEdited"];    
-    [self exposeBinding:@"objectCount"];
-    [self exposeBinding:@"objectCountColor"];
-    [self exposeBinding:@"icon"];
-    [self exposeBinding:@"largeImage"];
-    [self exposeBinding:@"hasCloseButton"];
++ (void)initialize
+{
+    if (self == [MMTabBarButton class]) {
+        [self exposeBinding:@"isProcessing"];
+        [self exposeBinding:@"isEdited"];    
+        [self exposeBinding:@"objectCount"];
+        [self exposeBinding:@"objectCountColor"];
+        [self exposeBinding:@"icon"];
+        [self exposeBinding:@"largeImage"];
+        [self exposeBinding:@"hasCloseButton"];
+    }
 }
 
 + (Class)cellClass {
     return [MMTabBarButtonCell class];
 }
 
-- (id)initWithFrame:(NSRect)frame {
+- (instancetype)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self _commonInit];
@@ -58,9 +54,8 @@ NSString *kMMTabBarButtonOberserverContext = @"MMTabBarView.MMTabBarButton.Obser
 
 - (void)dealloc
 {
-    [_closeButton release], _closeButton = nil;
-    [_indicator release], _indicator = nil;    
-    [super dealloc];
+    _closeButton = nil;
+    _indicator = nil;    
 }
 
 - (MMTabBarButtonCell *)cell {
@@ -158,7 +153,7 @@ NSString *kMMTabBarButtonOberserverContext = @"MMTabBarView.MMTabBarButton.Obser
 #pragma mark -
 #pragma mark Interfacing Cell
 
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 // Overidden method of superclass.
     // Note: We use standard binding for title property.
     // Standard binding uses a binding adaptor we cannot access.
@@ -294,9 +289,9 @@ NSString *kMMTabBarButtonOberserverContext = @"MMTabBarView.MMTabBarButton.Obser
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context 
 {
     [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-#if NEVER
+#ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
     
-    if (context == kMMTabBarButtonOberserverContext)
+    if (context == (__bridge void *)(kMMTabBarButtonOberserverContext))
         {
         if ([[self tabBarView] sizeButtonsToFit])
             {
