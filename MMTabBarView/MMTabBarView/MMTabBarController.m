@@ -20,7 +20,7 @@
 @implementation MMTabBarController
 {
 	__weak MMTabBarView	*_tabBarView;
-	NSMenu			*_overflowMenu;
+	NSMenu *_overflowMenu;
 }
 
 /*!
@@ -35,14 +35,6 @@
 		_tabBarView = aTabBarView;
 	}
 	return self;
-}
-
-- (void)dealloc {
-
-    _tabBarView = nil; // non retained!
-
-    _overflowMenu = nil;
-
 }
 
 /*!

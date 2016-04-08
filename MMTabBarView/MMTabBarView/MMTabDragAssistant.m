@@ -66,9 +66,6 @@ static MMTabDragAssistant *sharedDragAssistant = nil;
         [_slideButtonsAnimation stopAnimation];
         _slideButtonsAnimation = nil;
     }
-
-	_destinationTabBar = nil;
-    _pasteboardItem = nil;
     
 }
 

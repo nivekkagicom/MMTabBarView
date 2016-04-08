@@ -174,7 +174,6 @@ static NSMutableDictionary *registeredStyleClasses = nil;
 
 	//Also unwind the spring, if it's wound.
 	[_springTimer invalidate];
-	 _springTimer = nil;
 
 	//unbind all the items to prevent crashing
 	//not sure if this is necessary or not
@@ -184,15 +183,7 @@ static NSMutableDictionary *registeredStyleClasses = nil;
 		[self removeAttachedButton:aButton];
 	}
 
-	_overflowPopUpButton = nil;
-	_controller = nil;
-	_tabView = nil;
-	_addTabButton = nil;
-	_partnerView = nil;
-	_style = nil;
-
 	[self unregisterDraggedTypes];
-
 }
 
 - (void)viewWillMoveToWindow:(NSWindow *)aWindow {
