@@ -9,9 +9,11 @@
 
 #import "MMRolloverButtonCell.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation MMRolloverButton
 
-+ (Class)cellClass {
++ (nullable Class)cellClass {
     return [MMRolloverButtonCell class];
 }
 
@@ -36,11 +38,11 @@
 	}
 }
 
-- (MMRolloverButtonCell *)cell {
+- (nullable MMRolloverButtonCell *)cell {
     return (MMRolloverButtonCell *)[super cell];
 }
 
-- (void)setCell:(MMRolloverButtonCell *)aCell {
+- (void)setCell:(nullable MMRolloverButtonCell *)aCell {
     [super setCell:aCell];
 }
 
@@ -129,7 +131,7 @@
 	}
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+- (nullable instancetype)initWithCoder:(NSCoder *)aDecoder {
 	self = [super initWithCoder:aDecoder];
 	if (self) {
 		if ([aDecoder allowsKeyedCoding]) {
@@ -140,3 +142,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

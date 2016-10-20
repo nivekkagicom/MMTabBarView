@@ -17,6 +17,8 @@
 #import "MMTabBarView.Private.h"
 #import "MMTabBarButton.Private.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MMTabDragAssistant ()
 @end
 
@@ -173,6 +175,8 @@ static MMTabDragAssistant *sharedDragAssistant = nil;
 				if ([sourceDelegate respondsToSelector:@selector(tabView:didDropTabViewItem:inTabBarView:)]) {
 					[sourceDelegate tabView:sourceTabView didDropTabViewItem:[_attachedTabBarButton tabViewItem] inTabBarView:tabBarView];
 				}
+                
+                [tabBarView setNeedsUpdate:YES];
 			} else {
 				NSLog(@"Delegate returned no control to add to.");
                 [_sourceTabBar insertAttachedButton:_attachedTabBarButton atTabItemIndex:sourceIndex];
@@ -1051,3 +1055,5 @@ static MMTabDragAssistant *sharedDragAssistant = nil;
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

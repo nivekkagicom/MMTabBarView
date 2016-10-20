@@ -6,7 +6,11 @@
 //  Copyright 2011 Marrintech. All rights reserved.
 //
 
+#if __has_feature(modules)
+@import Cocoa;
+#else
 #import <Cocoa/Cocoa.h>
+#endif
 #import "MMTabStyle.h"
 #ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 #else
@@ -60,6 +64,8 @@ enum {
 
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MMSafariTabStyle : NSObject <MMTabStyle>
 #ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 #else
@@ -68,3 +74,5 @@ enum {
 #endif
 
 @end
+
+NS_ASSUME_NONNULL_END
