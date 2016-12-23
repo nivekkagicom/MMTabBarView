@@ -13,6 +13,7 @@
 #import "NSView+MMTabBarViewExtensions.h"
 #import "NSBezierPath+MMTabBarViewExtensions.h"
 #import "MMOverflowPopUpButton.h"
+#import "MMTabBarView.Private.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -43,7 +44,7 @@ StaticImage(YosemiteTabNewPressed)
 		_leftMarginForTabBarView = 0.f;
         _hasBaseline = YES;
         
-        _selectedTabColor = [NSColor colorWithDeviceWhite:0.875 alpha:1.000];
+        _selectedTabColor = [NSColor colorWithDeviceWhite:0.955 alpha:1.000];
         _unselectedTabColor = [NSColor colorWithDeviceWhite:0.875 alpha:1.000];
         
         _needsResizeTabsToFitTotalWidth = YES;
@@ -90,9 +91,9 @@ StaticImage(YosemiteTabNewPressed)
 }
 
 - (NSRect)addTabButtonRectForTabBarView:(MMTabBarView *)tabBarView {
-    NSRect window = [tabBarView frame];
-    NSSize buttonSize = [self addTabButtonSizeForTabBarView:tabBarView];
-    NSRect rect = NSMakeRect(NSMaxX(window) - buttonSize.width, 0, buttonSize.width, buttonSize.height);
+
+    NSRect rect = [tabBarView _addTabButtonRect];
+
     return rect;
 }
 
@@ -272,9 +273,12 @@ StaticImage(YosemiteTabNewPressed)
         
         if ([button state] == NSOnState) {
             [[NSGraphicsContext currentContext] setShouldAntialias:NO];
-            [self.selectedTabColor set];
+            [[self.selectedTabColor blendedColorWithFraction:0.4f ofColor:[NSColor whiteColor]] set];
             [fillPath fill];
             [[NSGraphicsContext currentContext] setShouldAntialias:YES];
+        } else {
+            [[self.unselectedTabColor blendedColorWithFraction:0.4f ofColor:[NSColor whiteColor]] set];
+            [fillPath fill];
         }
     }        
     
