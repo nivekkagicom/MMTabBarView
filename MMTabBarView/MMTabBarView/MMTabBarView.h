@@ -49,6 +49,9 @@ FOUNDATION_EXPORT const unsigned char MMTabBarViewVersionString[];
 #import <MMTabBarView/NSBezierPath+MMTabBarViewExtensions.h>
 #import <MMTabBarView/NSTabViewItem+MMTabBarViewExtensions.h>
 
+#import <MMTabBarView/MacVectorAATabStyle.h>
+#import <MMTabBarView/MacVectorNATabStyle.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class MMRolloverButton;

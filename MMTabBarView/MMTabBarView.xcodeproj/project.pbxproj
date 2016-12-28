@@ -242,9 +242,9 @@
 		0A661B48185F63BB000A6152 /* MacVectorCOTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A661B46185F63BB000A6152 /* MacVectorCOTabStyle.m */; };
 		0A661B4B185F63C7000A6152 /* MacVectorTRTabStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A661B49185F63C7000A6152 /* MacVectorTRTabStyle.h */; };
 		0A661B4C185F63C7000A6152 /* MacVectorTRTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A661B4A185F63C7000A6152 /* MacVectorTRTabStyle.m */; };
-		0AD2B26918099BBD00F52638 /* MacVectorAATabStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD2B26718099BBD00F52638 /* MacVectorAATabStyle.h */; };
+		0AD2B26918099BBD00F52638 /* MacVectorAATabStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD2B26718099BBD00F52638 /* MacVectorAATabStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0AD2B26A18099BBD00F52638 /* MacVectorAATabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2B26818099BBD00F52638 /* MacVectorAATabStyle.m */; };
-		0AD2B26D18099BCA00F52638 /* MacVectorNATabStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD2B26B18099BCA00F52638 /* MacVectorNATabStyle.h */; };
+		0AD2B26D18099BCA00F52638 /* MacVectorNATabStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD2B26B18099BCA00F52638 /* MacVectorNATabStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0AD2B26E18099BCA00F52638 /* MacVectorNATabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2B26C18099BCA00F52638 /* MacVectorNATabStyle.m */; };
 		0AD2B2E118099D5F00F52638 /* MVAAAWBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2B27F18099D5F00F52638 /* MVAAAWBG.png */; };
 		0AD2B2E818099D5F00F52638 /* MVAAAWITLeftCap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2B28618099D5F00F52638 /* MVAAAWITLeftCap.png */; };
