@@ -59,6 +59,8 @@ static NSImage* _static##name##Image() \
 /**
  *  Tab bar orientation
  */
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++98-compat"
 typedef NS_ENUM(NSUInteger, MMTabBarOrientation){
 /**
  *  Horizontal orientation
@@ -101,5 +103,6 @@ MMAttachedButtonsEnumerationUpdateTabStateMask = 1 << 1,
  */
 MMAttachedButtonsEnumerationUpdateButtonState  = 1 << 2
 };
+#pragma clang diagnostic pop
 
 NS_ASSUME_NONNULL_END

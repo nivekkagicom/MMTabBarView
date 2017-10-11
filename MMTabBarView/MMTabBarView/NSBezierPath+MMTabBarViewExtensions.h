@@ -14,6 +14,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++98-compat"
 typedef NS_ENUM(NSUInteger, MMBezierShapeCapMask)
 {
     MMBezierShapeLeftCap           = 0x0001,
@@ -24,6 +26,7 @@ typedef NS_ENUM(NSUInteger, MMBezierShapeCapMask)
     MMBezierShapeFlippedVertically = 0x1000,
     MMBezierShapeFillPath          = 0x2000
 };
+#pragma clang diagnostic pop
 
 @interface NSBezierPath (MMTabBarViewExtensions)
 

@@ -8,6 +8,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++98-compat"
 typedef NS_ENUM(NSUInteger, MMCloseButtonImageType)
 {
     MMCloseButtonImageTypeStandard = 0,
@@ -34,5 +36,6 @@ typedef NS_ENUM(NSUInteger,MMTabStateMask)
 	MMTab_PositionRightMask         = 1 << 10,
 	MMTab_PositionSingleMask		= 1 << 11
 };
+#pragma clang diagnostic pop
 
 NS_ASSUME_NONNULL_END

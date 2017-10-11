@@ -13,11 +13,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++98-compat"
 typedef NS_ENUM(NSUInteger, MMRolloverButtonType)
 {
     MMRolloverActionButton = 0,
     MMRolloverSwitchButton
 };
+#pragma clang diagnostic pop
 
 @interface MMRolloverButtonCell : NSButtonCell 
 
