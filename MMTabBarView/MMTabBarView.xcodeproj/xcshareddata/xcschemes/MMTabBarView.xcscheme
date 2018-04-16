@@ -17,7 +17,7 @@
                BlueprintIdentifier = "06DB23A51609F5820071BDA0"
                BuildableName = "MMTabBarView.framework"
                BlueprintName = "MMTabBarView"
-               ReferencedContainer = "container:MMTabBarView/MMTabBarView.xcodeproj">
+               ReferencedContainer = "container:MMTabBarView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -50,7 +50,7 @@
             BlueprintIdentifier = "06DB23A51609F5820071BDA0"
             BuildableName = "MMTabBarView.framework"
             BlueprintName = "MMTabBarView"
-            ReferencedContainer = "container:MMTabBarView/MMTabBarView.xcodeproj">
+            ReferencedContainer = "container:MMTabBarView.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -62,6 +62,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "06DB23A51609F5820071BDA0"
+            BuildableName = "MMTabBarView.framework"
+            BlueprintName = "MMTabBarView"
+            ReferencedContainer = "container:MMTabBarView.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
