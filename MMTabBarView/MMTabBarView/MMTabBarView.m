@@ -33,6 +33,7 @@
 #else
 #import "MacVectorAATabStyle.h"
 #import "MacVectorCOTabStyle.h"
+#import "MacVectorGLTabStyle.h"
 #import "MacVectorNATabStyle.h"
 #import "MacVectorTRTabStyle.h"
 #endif
@@ -420,6 +421,7 @@ static NSMutableDictionary *registeredStyleClasses = nil;
 #else
 	[self registerTabStyleClass:[MacVectorAATabStyle class]];
 	[self registerTabStyleClass:[MacVectorCOTabStyle class]];
+	[self registerTabStyleClass:[MacVectorGLTabStyle class]];
 	[self registerTabStyleClass:[MacVectorNATabStyle class]];
 	[self registerTabStyleClass:[MacVectorTRTabStyle class]];
 #endif

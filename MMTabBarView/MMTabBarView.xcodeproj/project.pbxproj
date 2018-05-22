@@ -266,6 +266,38 @@
 		0AD2B33118099D5F00F52638 /* MVNAIWITLeftCap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2B2CF18099D5F00F52638 /* MVNAIWITLeftCap@2x.png */; };
 		0AD2B33218099D5F00F52638 /* MVNAIWITRightCap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2B2D018099D5F00F52638 /* MVNAIWITRightCap.png */; };
 		0AD2B33318099D5F00F52638 /* MVNAIWITRightCap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2B2D118099D5F00F52638 /* MVNAIWITRightCap@2x.png */; };
+		0ADA448A20B4315500E93FE3 /* MacVectorGLTabStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA448820B4315500E93FE3 /* MacVectorGLTabStyle.h */; };
+		0ADA448B20B4315500E93FE3 /* MacVectorGLTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA448920B4315500E93FE3 /* MacVectorGLTabStyle.m */; };
+		0ADA44AA20B4335900E93FE3 /* MVGLAWITRightCapYosemite.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA448C20B4335200E93FE3 /* MVGLAWITRightCapYosemite.png */; };
+		0ADA44AB20B4335900E93FE3 /* MVGLKWITLeftCapYosemite.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA448D20B4335300E93FE3 /* MVGLKWITLeftCapYosemite.png */; };
+		0ADA44AC20B4335900E93FE3 /* MVGLIWITLeftCap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA448E20B4335300E93FE3 /* MVGLIWITLeftCap.png */; };
+		0ADA44AD20B4335900E93FE3 /* MVGLKWITRightCap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA448F20B4335300E93FE3 /* MVGLKWITRightCap@2x.png */; };
+		0ADA44AE20B4335900E93FE3 /* MVGLKWBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449020B4335300E93FE3 /* MVGLKWBG.png */; };
+		0ADA44AF20B4335900E93FE3 /* MVGLIWITRightCap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449120B4335400E93FE3 /* MVGLIWITRightCap@2x.png */; };
+		0ADA44B020B4335900E93FE3 /* MVGLAWITLeftCap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449220B4335400E93FE3 /* MVGLAWITLeftCap@2x.png */; };
+		0ADA44B120B4335900E93FE3 /* MVGLKWITLeftCap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449320B4335400E93FE3 /* MVGLKWITLeftCap@2x.png */; };
+		0ADA44B220B4335900E93FE3 /* MVGLKWITRightCap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449420B4335400E93FE3 /* MVGLKWITRightCap.png */; };
+		0ADA44B320B4335900E93FE3 /* MVGLIWITRightCapYosemite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449520B4335500E93FE3 /* MVGLIWITRightCapYosemite@2x.png */; };
+		0ADA44B420B4335900E93FE3 /* MVGLKWITLeftCapYosemite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449620B4335500E93FE3 /* MVGLKWITLeftCapYosemite@2x.png */; };
+		0ADA44B520B4335900E93FE3 /* MVGLKWITRightCapYosemite.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449720B4335500E93FE3 /* MVGLKWITRightCapYosemite.png */; };
+		0ADA44B620B4335900E93FE3 /* MVGLIWITRightCapYosemite.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449820B4335500E93FE3 /* MVGLIWITRightCapYosemite.png */; };
+		0ADA44B720B4335900E93FE3 /* MVGLAWITLeftCap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449920B4335500E93FE3 /* MVGLAWITLeftCap.png */; };
+		0ADA44B820B4335900E93FE3 /* MVGLAWITLeftCapYosemite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449A20B4335600E93FE3 /* MVGLAWITLeftCapYosemite@2x.png */; };
+		0ADA44B920B4335900E93FE3 /* MVGLAWITRightCapYosemite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449B20B4335600E93FE3 /* MVGLAWITRightCapYosemite@2x.png */; };
+		0ADA44BA20B4335900E93FE3 /* MVGLAWITRightCap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449C20B4335600E93FE3 /* MVGLAWITRightCap.png */; };
+		0ADA44BB20B4335900E93FE3 /* MVGLIWBGYosemite.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449D20B4335600E93FE3 /* MVGLIWBGYosemite.png */; };
+		0ADA44BC20B4335900E93FE3 /* MVGLIWITLeftCap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449E20B4335600E93FE3 /* MVGLIWITLeftCap@2x.png */; };
+		0ADA44BD20B4335900E93FE3 /* MVGLIWITLeftCapYosemite.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA449F20B4335700E93FE3 /* MVGLIWITLeftCapYosemite.png */; };
+		0ADA44BE20B4335900E93FE3 /* MVGLKWBGYosemite.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA44A020B4335700E93FE3 /* MVGLKWBGYosemite.png */; };
+		0ADA44BF20B4335900E93FE3 /* MVGLIWBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA44A120B4335700E93FE3 /* MVGLIWBG.png */; };
+		0ADA44C020B4335900E93FE3 /* MVGLAWITRightCap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA44A220B4335700E93FE3 /* MVGLAWITRightCap@2x.png */; };
+		0ADA44C120B4335900E93FE3 /* MVGLAWBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA44A320B4335800E93FE3 /* MVGLAWBG.png */; };
+		0ADA44C220B4335900E93FE3 /* MVGLIWITLeftCapYosemite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA44A420B4335800E93FE3 /* MVGLIWITLeftCapYosemite@2x.png */; };
+		0ADA44C320B4335900E93FE3 /* MVGLAWBGYosemite.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA44A520B4335800E93FE3 /* MVGLAWBGYosemite.png */; };
+		0ADA44C420B4335900E93FE3 /* MVGLIWITRightCap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA44A620B4335800E93FE3 /* MVGLIWITRightCap.png */; };
+		0ADA44C520B4335900E93FE3 /* MVGLKWITRightCapYosemite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA44A720B4335800E93FE3 /* MVGLKWITRightCapYosemite@2x.png */; };
+		0ADA44C620B4335900E93FE3 /* MVGLAWITLeftCapYosemite.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA44A820B4335900E93FE3 /* MVGLAWITLeftCapYosemite.png */; };
+		0ADA44C720B4335900E93FE3 /* MVGLKWITLeftCap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA44A920B4335900E93FE3 /* MVGLKWITLeftCap.png */; };
 		0AF5405119A4DEC9003502CE /* MVAAKWBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF53F8119A4DEC7003502CE /* MVAAKWBG.png */; };
 		0AF5405219A4DEC9003502CE /* MVAAKWBGYosemite.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF53F8219A4DEC7003502CE /* MVAAKWBGYosemite.png */; };
 		0AF5405F19A4DEC9003502CE /* MVAAKWITLeftCap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF53F8F19A4DEC7003502CE /* MVAAKWITLeftCap.png */; };
@@ -598,6 +630,38 @@
 		0AD2B2CF18099D5F00F52638 /* MVNAIWITLeftCap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVNAIWITLeftCap@2x.png"; sourceTree = "<group>"; };
 		0AD2B2D018099D5F00F52638 /* MVNAIWITRightCap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVNAIWITRightCap.png; sourceTree = "<group>"; };
 		0AD2B2D118099D5F00F52638 /* MVNAIWITRightCap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVNAIWITRightCap@2x.png"; sourceTree = "<group>"; };
+		0ADA448820B4315500E93FE3 /* MacVectorGLTabStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacVectorGLTabStyle.h; sourceTree = "<group>"; };
+		0ADA448920B4315500E93FE3 /* MacVectorGLTabStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacVectorGLTabStyle.m; sourceTree = "<group>"; };
+		0ADA448C20B4335200E93FE3 /* MVGLAWITRightCapYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLAWITRightCapYosemite.png; sourceTree = "<group>"; };
+		0ADA448D20B4335300E93FE3 /* MVGLKWITLeftCapYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLKWITLeftCapYosemite.png; sourceTree = "<group>"; };
+		0ADA448E20B4335300E93FE3 /* MVGLIWITLeftCap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLIWITLeftCap.png; sourceTree = "<group>"; };
+		0ADA448F20B4335300E93FE3 /* MVGLKWITRightCap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVGLKWITRightCap@2x.png"; sourceTree = "<group>"; };
+		0ADA449020B4335300E93FE3 /* MVGLKWBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLKWBG.png; sourceTree = "<group>"; };
+		0ADA449120B4335400E93FE3 /* MVGLIWITRightCap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVGLIWITRightCap@2x.png"; sourceTree = "<group>"; };
+		0ADA449220B4335400E93FE3 /* MVGLAWITLeftCap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVGLAWITLeftCap@2x.png"; sourceTree = "<group>"; };
+		0ADA449320B4335400E93FE3 /* MVGLKWITLeftCap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVGLKWITLeftCap@2x.png"; sourceTree = "<group>"; };
+		0ADA449420B4335400E93FE3 /* MVGLKWITRightCap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLKWITRightCap.png; sourceTree = "<group>"; };
+		0ADA449520B4335500E93FE3 /* MVGLIWITRightCapYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVGLIWITRightCapYosemite@2x.png"; sourceTree = "<group>"; };
+		0ADA449620B4335500E93FE3 /* MVGLKWITLeftCapYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVGLKWITLeftCapYosemite@2x.png"; sourceTree = "<group>"; };
+		0ADA449720B4335500E93FE3 /* MVGLKWITRightCapYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLKWITRightCapYosemite.png; sourceTree = "<group>"; };
+		0ADA449820B4335500E93FE3 /* MVGLIWITRightCapYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLIWITRightCapYosemite.png; sourceTree = "<group>"; };
+		0ADA449920B4335500E93FE3 /* MVGLAWITLeftCap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLAWITLeftCap.png; sourceTree = "<group>"; };
+		0ADA449A20B4335600E93FE3 /* MVGLAWITLeftCapYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVGLAWITLeftCapYosemite@2x.png"; sourceTree = "<group>"; };
+		0ADA449B20B4335600E93FE3 /* MVGLAWITRightCapYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVGLAWITRightCapYosemite@2x.png"; sourceTree = "<group>"; };
+		0ADA449C20B4335600E93FE3 /* MVGLAWITRightCap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLAWITRightCap.png; sourceTree = "<group>"; };
+		0ADA449D20B4335600E93FE3 /* MVGLIWBGYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLIWBGYosemite.png; sourceTree = "<group>"; };
+		0ADA449E20B4335600E93FE3 /* MVGLIWITLeftCap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVGLIWITLeftCap@2x.png"; sourceTree = "<group>"; };
+		0ADA449F20B4335700E93FE3 /* MVGLIWITLeftCapYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLIWITLeftCapYosemite.png; sourceTree = "<group>"; };
+		0ADA44A020B4335700E93FE3 /* MVGLKWBGYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLKWBGYosemite.png; sourceTree = "<group>"; };
+		0ADA44A120B4335700E93FE3 /* MVGLIWBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLIWBG.png; sourceTree = "<group>"; };
+		0ADA44A220B4335700E93FE3 /* MVGLAWITRightCap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVGLAWITRightCap@2x.png"; sourceTree = "<group>"; };
+		0ADA44A320B4335800E93FE3 /* MVGLAWBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLAWBG.png; sourceTree = "<group>"; };
+		0ADA44A420B4335800E93FE3 /* MVGLIWITLeftCapYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVGLIWITLeftCapYosemite@2x.png"; sourceTree = "<group>"; };
+		0ADA44A520B4335800E93FE3 /* MVGLAWBGYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLAWBGYosemite.png; sourceTree = "<group>"; };
+		0ADA44A620B4335800E93FE3 /* MVGLIWITRightCap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLIWITRightCap.png; sourceTree = "<group>"; };
+		0ADA44A720B4335800E93FE3 /* MVGLKWITRightCapYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVGLKWITRightCapYosemite@2x.png"; sourceTree = "<group>"; };
+		0ADA44A820B4335900E93FE3 /* MVGLAWITLeftCapYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLAWITLeftCapYosemite.png; sourceTree = "<group>"; };
+		0ADA44A920B4335900E93FE3 /* MVGLKWITLeftCap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVGLKWITLeftCap.png; sourceTree = "<group>"; };
 		0AF53F8119A4DEC7003502CE /* MVAAKWBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVAAKWBG.png; sourceTree = "<group>"; };
 		0AF53F8219A4DEC7003502CE /* MVAAKWBGYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVAAKWBGYosemite.png; sourceTree = "<group>"; };
 		0AF53F8F19A4DEC7003502CE /* MVAAKWITLeftCap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVAAKWITLeftCap.png; sourceTree = "<group>"; };
@@ -1041,6 +1105,8 @@
 				0AD2B26818099BBD00F52638 /* MacVectorAATabStyle.m */,
 				0A661B45185F63BB000A6152 /* MacVectorCOTabStyle.h */,
 				0A661B46185F63BB000A6152 /* MacVectorCOTabStyle.m */,
+				0ADA448820B4315500E93FE3 /* MacVectorGLTabStyle.h */,
+				0ADA448920B4315500E93FE3 /* MacVectorGLTabStyle.m */,
 				0AD2B26B18099BCA00F52638 /* MacVectorNATabStyle.h */,
 				0AD2B26C18099BCA00F52638 /* MacVectorNATabStyle.m */,
 				0A661B49185F63C7000A6152 /* MacVectorTRTabStyle.h */,
@@ -1113,6 +1179,36 @@
 				0AF53FC819A4DEC8003502CE /* MVCOKWITRightCap@2x.png */,
 				0AF53FC919A4DEC8003502CE /* MVCOKWITRightCapYosemite.png */,
 				0AF53FCA19A4DEC8003502CE /* MVCOKWITRightCapYosemite@2x.png */,
+				0ADA44A320B4335800E93FE3 /* MVGLAWBG.png */,
+				0ADA44A520B4335800E93FE3 /* MVGLAWBGYosemite.png */,
+				0ADA449920B4335500E93FE3 /* MVGLAWITLeftCap.png */,
+				0ADA449220B4335400E93FE3 /* MVGLAWITLeftCap@2x.png */,
+				0ADA44A820B4335900E93FE3 /* MVGLAWITLeftCapYosemite.png */,
+				0ADA449A20B4335600E93FE3 /* MVGLAWITLeftCapYosemite@2x.png */,
+				0ADA449C20B4335600E93FE3 /* MVGLAWITRightCap.png */,
+				0ADA44A220B4335700E93FE3 /* MVGLAWITRightCap@2x.png */,
+				0ADA448C20B4335200E93FE3 /* MVGLAWITRightCapYosemite.png */,
+				0ADA449B20B4335600E93FE3 /* MVGLAWITRightCapYosemite@2x.png */,
+				0ADA44A120B4335700E93FE3 /* MVGLIWBG.png */,
+				0ADA449D20B4335600E93FE3 /* MVGLIWBGYosemite.png */,
+				0ADA448E20B4335300E93FE3 /* MVGLIWITLeftCap.png */,
+				0ADA449E20B4335600E93FE3 /* MVGLIWITLeftCap@2x.png */,
+				0ADA449F20B4335700E93FE3 /* MVGLIWITLeftCapYosemite.png */,
+				0ADA44A420B4335800E93FE3 /* MVGLIWITLeftCapYosemite@2x.png */,
+				0ADA44A620B4335800E93FE3 /* MVGLIWITRightCap.png */,
+				0ADA449120B4335400E93FE3 /* MVGLIWITRightCap@2x.png */,
+				0ADA449820B4335500E93FE3 /* MVGLIWITRightCapYosemite.png */,
+				0ADA449520B4335500E93FE3 /* MVGLIWITRightCapYosemite@2x.png */,
+				0ADA449020B4335300E93FE3 /* MVGLKWBG.png */,
+				0ADA44A020B4335700E93FE3 /* MVGLKWBGYosemite.png */,
+				0ADA44A920B4335900E93FE3 /* MVGLKWITLeftCap.png */,
+				0ADA449320B4335400E93FE3 /* MVGLKWITLeftCap@2x.png */,
+				0ADA448D20B4335300E93FE3 /* MVGLKWITLeftCapYosemite.png */,
+				0ADA449620B4335500E93FE3 /* MVGLKWITLeftCapYosemite@2x.png */,
+				0ADA449420B4335400E93FE3 /* MVGLKWITRightCap.png */,
+				0ADA448F20B4335300E93FE3 /* MVGLKWITRightCap@2x.png */,
+				0ADA449720B4335500E93FE3 /* MVGLKWITRightCapYosemite.png */,
+				0ADA44A720B4335800E93FE3 /* MVGLKWITRightCapYosemite@2x.png */,
 				0AD2B2B018099D5F00F52638 /* MVNAAWBG.png */,
 				0A3300DD19A3F8B30014DC2A /* MVNAAWBGYosemite.png */,
 				0AD2B2B718099D5F00F52638 /* MVNAAWITLeftCap.png */,
@@ -1207,6 +1303,7 @@
 				0634F0221609FC7F00A6C86A /* MMTabPasteboardItem.h in Headers */,
 				0634F0241609FC7F00A6C86A /* MMTabStyle.h in Headers */,
 				0634F0351609FD9000A6C86A /* MMAdiumTabStyle.h in Headers */,
+				0ADA448A20B4315500E93FE3 /* MacVectorGLTabStyle.h in Headers */,
 				0634F0371609FD9000A6C86A /* MMAquaTabStyle.h in Headers */,
 				0634F0391609FD9000A6C86A /* MMCardTabStyle.h in Headers */,
 				0634F03B1609FD9000A6C86A /* MMLiveChatTabStyle.h in Headers */,
@@ -1281,6 +1378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADA44B720B4335900E93FE3 /* MVGLAWITLeftCap.png in Resources */,
 				06DB23B41609F5830071BDA0 /* InfoPlist.strings in Resources */,
 				0634F070160A0C8A00A6C86A /* AdiumGradient.png in Resources */,
 				0634F071160A0C8A00A6C86A /* AquaTabClose_Front.png in Resources */,
@@ -1289,7 +1387,9 @@
 				0634F074160A0C8A00A6C86A /* AquaTabClose_Front_Pressed@2x.png in Resources */,
 				0634F075160A0C8A00A6C86A /* AquaTabClose_Front_Rollover.png in Resources */,
 				0634F076160A0C8A00A6C86A /* AquaTabClose_Front_Rollover@2x.png in Resources */,
+				0ADA44B820B4335900E93FE3 /* MVGLAWITLeftCapYosemite@2x.png in Resources */,
 				0634F077160A0C8A00A6C86A /* AquaTabCloseDirty_Front.png in Resources */,
+				0ADA44C420B4335900E93FE3 /* MVGLIWITRightCap.png in Resources */,
 				0634F078160A0C8A00A6C86A /* AquaTabCloseDirty_Front_Pressed.png in Resources */,
 				0634F079160A0C8A00A6C86A /* AquaTabCloseDirty_Front_Rollover.png in Resources */,
 				06C956C01C984E85000AAF9D /* YosemiteTabNew.png in Resources */,
@@ -1298,6 +1398,7 @@
 				0634F07B160A0C8A00A6C86A /* AquaTabNew@2x.png in Resources */,
 				06C956BA1C984E85000AAF9D /* YosemiteTabClose_Front_Pressed.png in Resources */,
 				0634F07C160A0C8A00A6C86A /* AquaTabNewPressed.png in Resources */,
+				0ADA44B020B4335900E93FE3 /* MVGLAWITLeftCap@2x.png in Resources */,
 				06C956BE1C984E85000AAF9D /* YosemiteTabClose_Front.png in Resources */,
 				0634F07D160A0C8A00A6C86A /* AquaTabNewPressed@2x.png in Resources */,
 				0634F07E160A0C8A00A6C86A /* AquaTabNewRollover.png in Resources */,
@@ -1310,7 +1411,9 @@
 				0634F084160A0C8A00A6C86A /* AquaTabsSeparator.png in Resources */,
 				0634F085160A0C8A00A6C86A /* AquaTabsSeparatorDown.png in Resources */,
 				0634F086160A0C8A00A6C86A /* overflowImage.png in Resources */,
+				0ADA44AF20B4335900E93FE3 /* MVGLIWITRightCap@2x.png in Resources */,
 				0634F087160A0C8A00A6C86A /* overflowImage@2x.png in Resources */,
+				0ADA44B320B4335900E93FE3 /* MVGLIWITRightCapYosemite@2x.png in Resources */,
 				0634F088160A0C8A00A6C86A /* overflowImagePressed.png in Resources */,
 				0634F089160A0C8A00A6C86A /* overflowImagePressed@2x.png in Resources */,
 				0634F08A160A0C8A00A6C86A /* pi.png in Resources */,
@@ -1326,8 +1429,10 @@
 				0634F093160A0C8A00A6C86A /* TabClose_Front_Pressed.png in Resources */,
 				0634F094160A0C8A00A6C86A /* TabClose_Front_Pressed@2x.png in Resources */,
 				0634F095160A0C8A00A6C86A /* TabClose_Front_Rollover.png in Resources */,
+				0ADA44B620B4335900E93FE3 /* MVGLIWITRightCapYosemite.png in Resources */,
 				0634F096160A0C8A00A6C86A /* TabClose_Front_Rollover@2x.png in Resources */,
 				0634F097160A0C8A00A6C86A /* TabNewMetal.png in Resources */,
+				0ADA44BB20B4335900E93FE3 /* MVGLIWBGYosemite.png in Resources */,
 				0634F098160A0C8A00A6C86A /* TabNewMetalPressed.png in Resources */,
 				0634F099160A0C8A00A6C86A /* TabNewMetalRollover.png in Resources */,
 				066376081617493D004A1128 /* SafariAWAddTabButton.png in Resources */,
@@ -1352,6 +1457,8 @@
 				0AF6F7E519A7D2DD0073B7B5 /* SafariAWATRightCapYosemite.png in Resources */,
 				0AF6F7E619A7D2DD0073B7B5 /* SafariAWATRightCapYosemite@2x.png in Resources */,
 				066376111617493D004A1128 /* SafariAWBG.png in Resources */,
+				0ADA44BA20B4335900E93FE3 /* MVGLAWITRightCap.png in Resources */,
+				0ADA44BD20B4335900E93FE3 /* MVGLIWITLeftCapYosemite.png in Resources */,
 				066375F61617493D004A1128 /* SafariAWITClose.png in Resources */,
 				066375F71617493D004A1128 /* SafariAWITClose@2x.png in Resources */,
 				066375F81617493D004A1128 /* SafariAWITClosePressed.png in Resources */,
@@ -1361,6 +1468,7 @@
 				066376121617493D004A1128 /* SafariAWITLeftCap.png in Resources */,
 				066376131617493D004A1128 /* SafariAWITLeftCap@2x.png in Resources */,
 				066376141617493D004A1128 /* SafariAWITRightCap.png in Resources */,
+				0ADA44C520B4335900E93FE3 /* MVGLKWITRightCapYosemite@2x.png in Resources */,
 				066376151617493D004A1128 /* SafariAWITRightCap@2x.png in Resources */,
 				066376161617493D004A1128 /* SafariIWAddTabButton.png in Resources */,
 				066375FC1617493D004A1128 /* SafariIWATClose.png in Resources */,
@@ -1372,6 +1480,7 @@
 				066376171617493D004A1128 /* SafariIWATFill.png in Resources */,
 				0AF6F7E719A7D2DD0073B7B5 /* SafariIWATFillYosemite.png in Resources */,
 				0AF6F7E819A7D2DD0073B7B5 /* SafariIWATFillYosemite@2x.png in Resources */,
+				0ADA44BC20B4335900E93FE3 /* MVGLIWITLeftCap@2x.png in Resources */,
 				066376181617493D004A1128 /* SafariIWATLeftCap.png in Resources */,
 				06C956BF1C984E85000AAF9D /* YosemiteTabClose_Front@2x.png in Resources */,
 				066376191617493D004A1128 /* SafariIWATLeftCap@2x.png in Resources */,
@@ -1379,6 +1488,7 @@
 				0AF6F7EA19A7D2DD0073B7B5 /* SafariIWATLeftCapYosemite@2x.png in Resources */,
 				0663761A1617493D004A1128 /* SafariIWATRightCap.png in Resources */,
 				0663761B1617493D004A1128 /* SafariIWATRightCap@2x.png in Resources */,
+				0ADA44C620B4335900E93FE3 /* MVGLAWITLeftCapYosemite.png in Resources */,
 				0AF6F7EB19A7D2DD0073B7B5 /* SafariIWATRightCapYosemite.png in Resources */,
 				0AF6F7EC19A7D2DD0073B7B5 /* SafariIWATRightCapYosemite@2x.png in Resources */,
 				0663761C1617493D004A1128 /* SafariIWBG.png in Resources */,
@@ -1404,6 +1514,7 @@
 				0AD2B2E818099D5F00F52638 /* MVAAAWITLeftCap.png in Resources */,
 				0AD2B2E918099D5F00F52638 /* MVAAAWITLeftCap@2x.png in Resources */,
 				0A33014619A3F8B30014DC2A /* MVAAAWITLeftCapYosemite.png in Resources */,
+				0ADA44AE20B4335900E93FE3 /* MVGLKWBG.png in Resources */,
 				0A33014719A3F8B30014DC2A /* MVAAAWITLeftCapYosemite@2x.png in Resources */,
 				0AD2B2EA18099D5F00F52638 /* MVAAAWITRightCap.png in Resources */,
 				0AD2B2EB18099D5F00F52638 /* MVAAAWITRightCap@2x.png in Resources */,
@@ -1420,10 +1531,12 @@
 				0A33015F19A3F8B30014DC2A /* MVAAIWITRightCapYosemite.png in Resources */,
 				0A33016019A3F8B30014DC2A /* MVAAIWITRightCapYosemite@2x.png in Resources */,
 				0AF5405119A4DEC9003502CE /* MVAAKWBG.png in Resources */,
+				0ADA44AA20B4335900E93FE3 /* MVGLAWITRightCapYosemite.png in Resources */,
 				0AF5405219A4DEC9003502CE /* MVAAKWBGYosemite.png in Resources */,
 				0AF5405F19A4DEC9003502CE /* MVAAKWITLeftCap.png in Resources */,
 				0AF5406019A4DEC9003502CE /* MVAAKWITLeftCap@2x.png in Resources */,
 				0AF5406119A4DEC9003502CE /* MVAAKWITLeftCapYosemite.png in Resources */,
+				0ADA44B120B4335900E93FE3 /* MVGLKWITLeftCap@2x.png in Resources */,
 				0AF5406219A4DEC9003502CE /* MVAAKWITLeftCapYosemite@2x.png in Resources */,
 				0AF5406319A4DEC9003502CE /* MVAAKWITRightCap.png in Resources */,
 				0AF5406419A4DEC9003502CE /* MVAAKWITRightCap@2x.png in Resources */,
@@ -1434,15 +1547,21 @@
 				0A661AC8185F6339000A6152 /* MVCOAWITLeftCap.png in Resources */,
 				0A661AC9185F6339000A6152 /* MVCOAWITLeftCap@2x.png in Resources */,
 				0A33017719A3F8B30014DC2A /* MVCOAWITLeftCapYosemite.png in Resources */,
+				0ADA44BF20B4335900E93FE3 /* MVGLIWBG.png in Resources */,
 				0A33017819A3F8B30014DC2A /* MVCOAWITLeftCapYosemite@2x.png in Resources */,
+				0ADA44B420B4335900E93FE3 /* MVGLKWITLeftCapYosemite@2x.png in Resources */,
 				0A661ACA185F6339000A6152 /* MVCOAWITRightCap.png in Resources */,
 				0A661ACB185F6339000A6152 /* MVCOAWITRightCap@2x.png in Resources */,
 				0A33017919A3F8B30014DC2A /* MVCOAWITRightCapYosemite.png in Resources */,
 				0A33017A19A3F8B30014DC2A /* MVCOAWITRightCapYosemite@2x.png in Resources */,
+				0ADA44C320B4335900E93FE3 /* MVGLAWBGYosemite.png in Resources */,
 				0A661AD8185F6339000A6152 /* MVCOIWBG.png in Resources */,
+				0ADA44C720B4335900E93FE3 /* MVGLKWITLeftCap.png in Resources */,
 				0A33018719A3F8B30014DC2A /* MVCOIWBGYosemite.png in Resources */,
+				0ADA44C220B4335900E93FE3 /* MVGLIWITLeftCapYosemite@2x.png in Resources */,
 				0A661ADF185F6339000A6152 /* MVCOIWITLeftCap.png in Resources */,
 				0A661AE0185F6339000A6152 /* MVCOIWITLeftCap@2x.png in Resources */,
+				0ADA44B920B4335900E93FE3 /* MVGLAWITRightCapYosemite@2x.png in Resources */,
 				0A33018E19A3F8B30014DC2A /* MVCOIWITLeftCapYosemite.png in Resources */,
 				0A33018F19A3F8B30014DC2A /* MVCOIWITLeftCapYosemite@2x.png in Resources */,
 				0A661AE1185F6339000A6152 /* MVCOIWITRightCap.png in Resources */,
@@ -1455,6 +1574,7 @@
 				0AF5409419A4DEC9003502CE /* MVCOKWITLeftCap@2x.png in Resources */,
 				0AF5409519A4DEC9003502CE /* MVCOKWITLeftCapYosemite.png in Resources */,
 				0AF5409619A4DEC9003502CE /* MVCOKWITLeftCapYosemite@2x.png in Resources */,
+				0ADA44C120B4335900E93FE3 /* MVGLAWBG.png in Resources */,
 				0AF5409719A4DEC9003502CE /* MVCOKWITRightCap.png in Resources */,
 				0AF5409819A4DEC9003502CE /* MVCOKWITRightCap@2x.png in Resources */,
 				0AF5409919A4DEC9003502CE /* MVCOKWITRightCapYosemite.png in Resources */,
@@ -1478,8 +1598,11 @@
 				0AD2B33218099D5F00F52638 /* MVNAIWITRightCap.png in Resources */,
 				0AD2B33318099D5F00F52638 /* MVNAIWITRightCap@2x.png in Resources */,
 				0A3301C119A3F8B30014DC2A /* MVNAIWITRightCapYosemite.png in Resources */,
+				0ADA44C020B4335900E93FE3 /* MVGLAWITRightCap@2x.png in Resources */,
 				0A3301C219A3F8B30014DC2A /* MVNAIWITRightCapYosemite@2x.png in Resources */,
 				0AF540B919A4DEC9003502CE /* MVNAKWBG.png in Resources */,
+				0ADA44AC20B4335900E93FE3 /* MVGLIWITLeftCap.png in Resources */,
+				0ADA44B520B4335900E93FE3 /* MVGLKWITRightCapYosemite.png in Resources */,
 				0AF540BA19A4DEC9003502CE /* MVNAKWBGYosemite.png in Resources */,
 				0AF540C719A4DEC9003502CE /* MVNAKWITLeftCap.png in Resources */,
 				0AF540C819A4DEC9003502CE /* MVNAKWITLeftCap@2x.png in Resources */,
@@ -1489,6 +1612,8 @@
 				0AF540CC19A4DEC9003502CE /* MVNAKWITRightCap@2x.png in Resources */,
 				0AF540CD19A4DEC9003502CE /* MVNAKWITRightCapYosemite.png in Resources */,
 				0AF540CE19A4DEC9003502CE /* MVNAKWITRightCapYosemite@2x.png in Resources */,
+				0ADA44BE20B4335900E93FE3 /* MVGLKWBGYosemite.png in Resources */,
+				0ADA44AB20B4335900E93FE3 /* MVGLKWITLeftCapYosemite.png in Resources */,
 				0A661B23185F634D000A6152 /* MVTRAWBG.png in Resources */,
 				0A3301D219A3F8B30014DC2A /* MVTRAWBGYosemite.png in Resources */,
 				0A661B2A185F634D000A6152 /* MVTRAWITLeftCap.png in Resources */,
@@ -1503,6 +1628,7 @@
 				0A3301E919A3F8B30014DC2A /* MVTRIWBGYosemite.png in Resources */,
 				0A661B41185F634D000A6152 /* MVTRIWITLeftCap.png in Resources */,
 				0A661B42185F634D000A6152 /* MVTRIWITLeftCap@2x.png in Resources */,
+				0ADA44B220B4335900E93FE3 /* MVGLKWITRightCap.png in Resources */,
 				0A3301F019A3F8B30014DC2A /* MVTRIWITLeftCapYosemite.png in Resources */,
 				0A3301F119A3F8B30014DC2A /* MVTRIWITLeftCapYosemite@2x.png in Resources */,
 				0A661B43185F634D000A6152 /* MVTRIWITRightCap.png in Resources */,
@@ -1511,6 +1637,7 @@
 				0A3301F319A3F8B30014DC2A /* MVTRIWITRightCapYosemite@2x.png in Resources */,
 				0AF540ED19A4DEC9003502CE /* MVTRKWBG.png in Resources */,
 				0AF540EE19A4DEC9003502CE /* MVTRKWBGYosemite.png in Resources */,
+				0ADA44AD20B4335900E93FE3 /* MVGLKWITRightCap@2x.png in Resources */,
 				0AF540FB19A4DEC9003502CE /* MVTRKWITLeftCap.png in Resources */,
 				0AF540FC19A4DEC9003502CE /* MVTRKWITLeftCap@2x.png in Resources */,
 				0AF540FD19A4DEC9003502CE /* MVTRKWITLeftCapYosemite.png in Resources */,
@@ -1532,6 +1659,7 @@
 				06DB23B81609F5830071BDA0 /* MMTabBarView.m in Sources */,
 				0634EFDC1609FC6300A6C86A /* MMAttachedTabBarButton.m in Sources */,
 				0634F0041609FC7F00A6C86A /* NSView+MMTabBarViewExtensions.m in Sources */,
+				0ADA448B20B4315500E93FE3 /* MacVectorGLTabStyle.m in Sources */,
 				0634F0061609FC7F00A6C86A /* MMAttachedTabBarButtonCell.m in Sources */,
 				06C956A01C984932000AAF9D /* MMYosemiteTabStyle.m in Sources */,
 				0634F0081609FC7F00A6C86A /* MMOverflowPopUpButton.m in Sources */,
