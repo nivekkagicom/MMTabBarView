@@ -49,15 +49,14 @@ NSImage* CreateOSVersionedImage(NSString* const inName) {
 		if ([NSProcessInfo.processInfo respondsToSelector:@selector(isOperatingSystemAtLeastVersion:)]) {
 			NSOperatingSystemVersion const useYosemiteTabStyleVersion = { 10, 10, 0 };
 			if ([NSProcessInfo.processInfo isOperatingSystemAtLeastVersion:useYosemiteTabStyleVersion]) {
-				NSURL* const url = [[MMTabBarView bundle] URLForImageResource:[inName stringByAppendingString:@"Yosemite"]];
-				NSImage* const image = [[NSImage alloc] initByReferencingURL:url];
+				NSImage* const image = [[MMTabBarView bundle] imageForResource:[inName stringByAppendingString:@"Yosemite"]];
 				if (image != nil) {
 					return image;
 				}
 			}
 		}
 	}
-	return [[NSImage alloc] initByReferencingURL:[[MMTabBarView bundle] URLForImageResource:inName]];
+	return [[MMTabBarView bundle] imageForResource:inName];
 }
 #endif
 
