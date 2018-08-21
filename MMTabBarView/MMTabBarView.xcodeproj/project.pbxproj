@@ -93,6 +93,9 @@
 		0AED2BA120D805D60049C786 /* Yosemite.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AED2BA020D805D60049C786 /* Yosemite.xcassets */; };
 		0AED2BA520D806700049C786 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AED2BA420D806700049C786 /* Images.xcassets */; };
 		0AED2C0020D810FA0049C786 /* MacVector.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AED2BFF20D810FA0049C786 /* MacVector.xcassets */; };
+		D0103C8E210FE7C8001D2CC6 /* MMMojaveTabStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = D0103C8C210FE7C8001D2CC6 /* MMMojaveTabStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0103C8F210FE7C8001D2CC6 /* MMMojaveTabStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D0103C8D210FE7C8001D2CC6 /* MMMojaveTabStyle.m */; };
+		D09FB6CC2110923D008C3E23 /* MMMojaveTabStyle+Assets.m in Sources */ = {isa = PBXBuildFile; fileRef = D09FB6CA2110923D008C3E23 /* MMMojaveTabStyle+Assets.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,24 +197,10 @@
 		0AED2BA020D805D60049C786 /* Yosemite.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Yosemite.xcassets; sourceTree = "<group>"; };
 		0AED2BA420D806700049C786 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MMTabBarView/Images.xcassets; sourceTree = "<group>"; };
 		0AED2BFF20D810FA0049C786 /* MacVector.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MacVector.xcassets; sourceTree = "<group>"; };
-		0AF6F7CF19A7D2DD0073B7B5 /* SafariAWATFillYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SafariAWATFillYosemite.png; sourceTree = "<group>"; };
-		0AF6F7D019A7D2DD0073B7B5 /* SafariAWATFillYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SafariAWATFillYosemite@2x.png"; sourceTree = "<group>"; };
-		0AF6F7D119A7D2DD0073B7B5 /* SafariAWATLeftCapYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SafariAWATLeftCapYosemite.png; sourceTree = "<group>"; };
-		0AF6F7D219A7D2DD0073B7B5 /* SafariAWATLeftCapYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SafariAWATLeftCapYosemite@2x.png"; sourceTree = "<group>"; };
-		0AF6F7D319A7D2DD0073B7B5 /* SafariAWATRightCapYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SafariAWATRightCapYosemite.png; sourceTree = "<group>"; };
-		0AF6F7D419A7D2DD0073B7B5 /* SafariAWATRightCapYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SafariAWATRightCapYosemite@2x.png"; sourceTree = "<group>"; };
-		0AF6F7D519A7D2DD0073B7B5 /* SafariIWATFillYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SafariIWATFillYosemite.png; sourceTree = "<group>"; };
-		0AF6F7D619A7D2DD0073B7B5 /* SafariIWATFillYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SafariIWATFillYosemite@2x.png"; sourceTree = "<group>"; };
-		0AF6F7D719A7D2DD0073B7B5 /* SafariIWATLeftCapYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SafariIWATLeftCapYosemite.png; sourceTree = "<group>"; };
-		0AF6F7D819A7D2DD0073B7B5 /* SafariIWATLeftCapYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SafariIWATLeftCapYosemite@2x.png"; sourceTree = "<group>"; };
-		0AF6F7D919A7D2DD0073B7B5 /* SafariIWATRightCapYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SafariIWATRightCapYosemite.png; sourceTree = "<group>"; };
-		0AF6F7DA19A7D2DD0073B7B5 /* SafariIWATRightCapYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SafariIWATRightCapYosemite@2x.png"; sourceTree = "<group>"; };
-		0AF6F7DB19A7D2DD0073B7B5 /* SafariKWATFillYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SafariKWATFillYosemite.png; sourceTree = "<group>"; };
-		0AF6F7DC19A7D2DD0073B7B5 /* SafariKWATFillYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SafariKWATFillYosemite@2x.png"; sourceTree = "<group>"; };
-		0AF6F7DD19A7D2DD0073B7B5 /* SafariKWATLeftCapYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SafariKWATLeftCapYosemite.png; sourceTree = "<group>"; };
-		0AF6F7DE19A7D2DD0073B7B5 /* SafariKWATLeftCapYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SafariKWATLeftCapYosemite@2x.png"; sourceTree = "<group>"; };
-		0AF6F7DF19A7D2DD0073B7B5 /* SafariKWATRightCapYosemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SafariKWATRightCapYosemite.png; sourceTree = "<group>"; };
-		0AF6F7E019A7D2DD0073B7B5 /* SafariKWATRightCapYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SafariKWATRightCapYosemite@2x.png"; sourceTree = "<group>"; };
+		D0103C8C210FE7C8001D2CC6 /* MMMojaveTabStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMojaveTabStyle.h; sourceTree = "<group>"; };
+		D0103C8D210FE7C8001D2CC6 /* MMMojaveTabStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMojaveTabStyle.m; sourceTree = "<group>"; };
+		D09FB6C821108F4C008C3E23 /* MMMojaveTabStyle+Assets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMMojaveTabStyle+Assets.h"; sourceTree = "<group>"; };
+		D09FB6CA2110923D008C3E23 /* MMMojaveTabStyle+Assets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MMMojaveTabStyle+Assets.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +279,7 @@
 				06B51CB2160B558700153FA2 /* Safari Tab Style */,
 				06C9569C1C984912000AAF9D /* Yosemite Tab Style */,
 				0AD2B26618099B2F00F52638 /* MacVector */,
+				D0103C8B210FE7C8001D2CC6 /* Mojave Tab Style */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -470,29 +460,15 @@
 			path = "MacVector Tab Styles";
 			sourceTree = "<group>";
 		};
-		0AED2BE420D810A10049C786 /* Recovered References */ = {
+		D0103C8B210FE7C8001D2CC6 /* Mojave Tab Style */ = {
 			isa = PBXGroup;
 			children = (
-				0AF6F7CF19A7D2DD0073B7B5 /* SafariAWATFillYosemite.png */,
-				0AF6F7D019A7D2DD0073B7B5 /* SafariAWATFillYosemite@2x.png */,
-				0AF6F7D119A7D2DD0073B7B5 /* SafariAWATLeftCapYosemite.png */,
-				0AF6F7D219A7D2DD0073B7B5 /* SafariAWATLeftCapYosemite@2x.png */,
-				0AF6F7D319A7D2DD0073B7B5 /* SafariAWATRightCapYosemite.png */,
-				0AF6F7D419A7D2DD0073B7B5 /* SafariAWATRightCapYosemite@2x.png */,
-				0AF6F7D519A7D2DD0073B7B5 /* SafariIWATFillYosemite.png */,
-				0AF6F7D619A7D2DD0073B7B5 /* SafariIWATFillYosemite@2x.png */,
-				0AF6F7D719A7D2DD0073B7B5 /* SafariIWATLeftCapYosemite.png */,
-				0AF6F7D819A7D2DD0073B7B5 /* SafariIWATLeftCapYosemite@2x.png */,
-				0AF6F7D919A7D2DD0073B7B5 /* SafariIWATRightCapYosemite.png */,
-				0AF6F7DA19A7D2DD0073B7B5 /* SafariIWATRightCapYosemite@2x.png */,
-				0AF6F7DB19A7D2DD0073B7B5 /* SafariKWATFillYosemite.png */,
-				0AF6F7DC19A7D2DD0073B7B5 /* SafariKWATFillYosemite@2x.png */,
-				0AF6F7DD19A7D2DD0073B7B5 /* SafariKWATLeftCapYosemite.png */,
-				0AF6F7DE19A7D2DD0073B7B5 /* SafariKWATLeftCapYosemite@2x.png */,
-				0AF6F7DF19A7D2DD0073B7B5 /* SafariKWATRightCapYosemite.png */,
-				0AF6F7E019A7D2DD0073B7B5 /* SafariKWATRightCapYosemite@2x.png */,
+				D0103C8C210FE7C8001D2CC6 /* MMMojaveTabStyle.h */,
+				D0103C8D210FE7C8001D2CC6 /* MMMojaveTabStyle.m */,
+				D09FB6C821108F4C008C3E23 /* MMMojaveTabStyle+Assets.h */,
+				D09FB6CA2110923D008C3E23 /* MMMojaveTabStyle+Assets.m */,
 			);
-			name = "Recovered References";
+			path = "Mojave Tab Style";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -539,6 +515,7 @@
 				06789D731611FE1E0080FCFE /* NSCell+MMTabBarViewExtensions.h in Headers */,
 				06789DB6161324D50080FCFE /* NSAffineTransform+MMTabBarViewExtensions.h in Headers */,
 				06789DBE161337770080FCFE /* NSBezierPath+MMTabBarViewExtensions.h in Headers */,
+				D0103C8E210FE7C8001D2CC6 /* MMMojaveTabStyle.h in Headers */,
 				066375A216171EFC004A1128 /* MMTabBarItem.h in Headers */,
 				066375A516172608004A1128 /* NSTabViewItem+MMTabBarViewExtensions.h in Headers */,
 				0AD2B26918099BBD00F52638 /* MacVectorAATabStyle.h in Headers */,
@@ -633,9 +610,11 @@
 				0634F01D1609FC7F00A6C86A /* MMTabDragView.m in Sources */,
 				0634F01F1609FC7F00A6C86A /* MMTabDragWindow.m in Sources */,
 				0634F0211609FC7F00A6C86A /* MMTabDragWindowController.m in Sources */,
+				D0103C8F210FE7C8001D2CC6 /* MMMojaveTabStyle.m in Sources */,
 				0634F0231609FC7F00A6C86A /* MMTabPasteboardItem.m in Sources */,
 				0634F0361609FD9000A6C86A /* MMAdiumTabStyle.m in Sources */,
 				0634F0381609FD9000A6C86A /* MMAquaTabStyle.m in Sources */,
+				D09FB6CC2110923D008C3E23 /* MMMojaveTabStyle+Assets.m in Sources */,
 				0634F03A1609FD9000A6C86A /* MMCardTabStyle.m in Sources */,
 				0634F03C1609FD9000A6C86A /* MMLiveChatTabStyle.m in Sources */,
 				0634F03E1609FD9000A6C86A /* MMMetalTabStyle.m in Sources */,
