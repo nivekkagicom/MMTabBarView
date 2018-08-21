@@ -582,6 +582,7 @@ StaticImage(SafariIWITRightCap)
     }
     NSDrawThreePartImage(bezelRect, left, center, right, NO, NSCompositeSourceOver, 1.0, [tabBarView isFlipped]);
 }
+#if NEVER
 
 -(void)drawBezelOfTabCell:(MMTabBarButtonCell *)cell withFrame:(NSRect)frame inView:(NSView *)controlView {
 
@@ -643,8 +644,9 @@ StaticImage(SafariIWITRightCap)
     }
 
     if (center != nil || left != nil || right != nil)
-        NSDrawThreePartImage(cellFrame, left, center, right, NO, NSCompositeSourceOver, 1, [controlView isFlipped]);            
+        NSDrawThreePartImage(cellFrame, left, center, right, NO, NSCompositeSourceOver, 1, [controlView isFlipped]);
 }
+#endif
 
 @end
 
