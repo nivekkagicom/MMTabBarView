@@ -86,7 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  A partner view
  */
-@property (strong) IBOutlet NSView *partnerView;
+@property (nullable, strong) IBOutlet NSView *partnerView;
 
 /**
  *  Delegate
@@ -191,7 +191,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return The matching tab style class
  */
-+ (Class <MMTabStyle>)registeredClassForStyleName:(NSString *)name;
++ (nullable Class <MMTabStyle>)registeredClassForStyleName:(NSString *)name;
 
 #pragma mark Tab View Item Management
 
@@ -222,7 +222,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Get selected tab view item
  */
-@property (readonly) NSTabViewItem *selectedTabViewItem;
+@property (nullable, readonly) NSTabViewItem *selectedTabViewItem;
 
 /**
  *  Select specified tab view item
@@ -335,7 +335,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *   Get last attached tab bar button
  */
-@property (readonly) MMAttachedTabBarButton *lastAttachedButton;
+@property (nullable, readonly) MMAttachedTabBarButton *lastAttachedButton;
 
 /**
  *  Get attached tab bar button at point
@@ -590,7 +590,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)startDraggingAttachedTabBarButton:(MMAttachedTabBarButton *)aButton withMouseDownEvent:(NSEvent *)theEvent;
 
-- (MMAttachedTabBarButton *)attachedTabBarButtonForDraggedItems;
+- (nullable MMAttachedTabBarButton *)attachedTabBarButtonForDraggedItems;
 
 - (BOOL)isSliding;
 - (BOOL)isDragging;

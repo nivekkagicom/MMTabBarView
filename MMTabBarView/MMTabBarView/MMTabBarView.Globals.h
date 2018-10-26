@@ -31,11 +31,11 @@ static NSImage* _static##name##Image() \
 { \
     static NSImage* image = nil; \
     if (!image) \
-        image = [[MMTabBarView bundle] imageForResource:@#name]; \
+        image = [MMTabBarView.bundle imageForResource:@#name]; \
     return image; \
 }
 #else
-NSImage* CreateOSVersionedImage(NSString* const inName);
+NSImage* _Nullable CreateOSVersionedImage(NSString* const inName);
 
 #define StaticImage(name) \
 static NSImage* _static##name##Image() \
@@ -52,7 +52,7 @@ static NSImage* _static##name##Image() \
 { \
     static NSImage* image = nil; \
     if (!image) \
-        image = [[MMTabBarView bundle] imageForResource:@#filename]; \
+        image = [MMTabBarView.bundle imageForResource:@#filename]; \
     return image; \
 }
 
