@@ -355,18 +355,18 @@ static NSMutableDictionary<NSString*, Class <MMTabStyle>> *registeredStyleClasse
 }
 #ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
 #else
+
 - (BOOL)isKeyWindow {
 	NSWindow* const window = self.window;
-	if (![NSUserDefaults.standardUserDefaults boolForKey:@"UseSystemDependentTabStyle"]) {
-		return NO;
+	if ([NSUserDefaults.standardUserDefaults boolForKey:@"UseSystemDependentTabStyle"]) {
+		if (@available(macos 10.10, *)) {
+			if ([NSUserDefaults.standardUserDefaults boolForKey:@"UseSystemKeyWindowTabStyle"]) {
+				return YES;
+			}
+			return window.isKeyWindow;
+		}
 	}
-	if (@available(macos 10.10, *)) {
-		return NO;
-	}
-	if ([NSUserDefaults.standardUserDefaults boolForKey:@"UseSystemKeyWindowTabStyle"]) {
-		return YES;
-	}
-	return window.isKeyWindow;
+	return NO;
 }
 #endif
 
