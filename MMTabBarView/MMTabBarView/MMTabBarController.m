@@ -69,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)layoutButtons {
 
-    NSArray *attachedButtons = _tabBarView.orderedAttachedButtons;
+    NSArray<MMAttachedTabBarButton *> *attachedButtons = _tabBarView.orderedAttachedButtons;
             
     NSInteger buttonCount = attachedButtons.count;
     
@@ -78,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
     
         MMAttachedTabBarButton *draggedButton = _tabBarView.attachedTabBarButtonForDraggedItems;
         if (draggedButton) {
-            NSMutableArray *mutable = [attachedButtons mutableCopy];
+            NSMutableArray<MMAttachedTabBarButton *> *mutable = [attachedButtons mutableCopy];
             [mutable insertObject:draggedButton atIndex:_tabBarView.destinationIndexForDraggedItem];
             attachedButtons = mutable;
             
@@ -86,7 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
         }
     }
     
-    NSArray *buttonWidths = [self _generateWidthsFromAttachedButtons:attachedButtons];
+    NSArray<NSNumber *> *buttonWidths = [self _generateWidthsFromAttachedButtons:attachedButtons];
     [self _setupAttachedButtons:attachedButtons withWidths:buttonWidths];
 }
 
@@ -105,7 +105,7 @@ static NSInteger potentialMinimumForArray(NSArray<NSNumber *> *array, NSInteger 
 	NSInteger count = array.count;
 
 	for(NSInteger i = 0; i < count; i++) {
-		NSInteger currentValue = [[array objectAtIndex:i] integerValue];
+		NSInteger currentValue = array[i].integerValue;
 		runningTotal += MIN(currentValue, minimum);
 	}
 
@@ -143,7 +143,7 @@ static NSInteger potentialMinimumForArray(NSArray<NSNumber *> *array, NSInteger 
     @param      buttons An array of MMAttachedTabBarButton.
     @returns    An array of numbers representing the widths of attached buttons that would be visible.
 */
-- (NSArray *)_generateWidthsFromAttachedButtons:(NSArray<MMAttachedTabBarButton *> *)buttons {
+- (NSArray<NSNumber *> *)_generateWidthsFromAttachedButtons:(NSArray<MMAttachedTabBarButton *> *)buttons {
     NSInteger buttonCount = buttons.count, i, numberOfVisibleButtons = (_tabBarView.orientation == MMTabBarHorizontalOrientation) ? 1 : 0;
 	NSMutableArray<NSNumber *> *newWidths = [NSMutableArray arrayWithCapacity:buttonCount];
 
@@ -157,7 +157,7 @@ static NSInteger potentialMinimumForArray(NSArray<NSNumber *> *array, NSInteger 
 	}
 
 	for(i = 0; i < buttonCount; i++) {
-		currentButton = [buttons objectAtIndex:i];
+		currentButton = buttons[i];
 
         BOOL displayCloseButton = _tabBarView.allowsBackgroundTabClosing || (currentButton.state == NSOnState);
 
@@ -196,7 +196,7 @@ static NSInteger potentialMinimumForArray(NSArray<NSNumber *> *array, NSInteger 
 					[newWidths removeAllObjects];
 
 					for(j = 0; j < buttonCount; j++) {
-						CGFloat desiredWidth = [[buttons objectAtIndex:j] desiredWidth];
+						CGFloat desiredWidth = [buttons[j] desiredWidth];
 						[newWidths addObject:[NSNumber numberWithDouble:(desiredWidth < averageWidth && _tabBarView.sizeButtonsToFit) ? desiredWidth : averageWidth]];
 					}
 
@@ -269,7 +269,7 @@ static NSInteger potentialMinimumForArray(NSArray<NSNumber *> *array, NSInteger 
 								NSInteger q;
 								for(q = numberOfVisibleButtons - 1; q >= 0; q--) {
 									NSInteger desiredAddition = (NSInteger)leftoverWidth / (q + 1);
-									NSInteger newButtonWidth = (NSInteger)[[newWidths objectAtIndex:q] doubleValue] + desiredAddition;
+									NSInteger newButtonWidth = (NSInteger) newWidths[q].doubleValue + desiredAddition;
 									[newWidths replaceObjectAtIndex:q withObject:[NSNumber numberWithDouble:newButtonWidth]];
 									leftoverWidth -= desiredAddition;
 									totalOccupiedWidth += desiredAddition;
@@ -288,7 +288,7 @@ static NSInteger potentialMinimumForArray(NSArray<NSNumber *> *array, NSInteger 
 						NSInteger q;
 						for(q = i - 1; q >= 0; q--) {
 							NSInteger desiredAddition = (NSInteger)leftoverWidth / (q + 1);
-							NSInteger newButtonWidth = (NSInteger)[[newWidths objectAtIndex:q] doubleValue] + desiredAddition;
+							NSInteger newButtonWidth = (NSInteger) newWidths[q].doubleValue + desiredAddition;
 							[newWidths replaceObjectAtIndex:q withObject:[NSNumber numberWithDouble:newButtonWidth]];
 							leftoverWidth -= desiredAddition;
 						}
@@ -380,7 +380,7 @@ static NSInteger potentialMinimumForArray(NSArray<NSNumber *> *array, NSInteger 
 	//make sure there are at least two items in the horizontal tab bar
 	if (_tabBarView.orientation == MMTabBarHorizontalOrientation) {
 		if (numberOfVisibleButtons < 2 && buttons.count > 1) {
-			MMAttachedTabBarButton *button1 = [buttons objectAtIndex:0], *button2 = [buttons objectAtIndex:1];
+			MMAttachedTabBarButton *button1 = buttons[0], *button2 = buttons[1];
 			NSNumber *buttonWidth;
 
 			[newWidths removeAllObjects];
@@ -419,7 +419,7 @@ static NSInteger potentialMinimumForArray(NSArray<NSNumber *> *array, NSInteger 
     @abstract   Creates tracking rect arrays and sets the frames of the visible attachment buttons.
     @discussion Creates tracking rect arrays and sets the frames given in the widths array.
 */
-- (void)_setupAttachedButtons:(NSArray *)buttons withWidths:(NSArray<NSNumber *> *)widths {
+- (void)_setupAttachedButtons:(NSArray<MMAttachedTabBarButton *> *)buttons withWidths:(NSArray<NSNumber *> *)widths {
 
     NSUInteger buttonCount = buttons.count;
 
@@ -449,10 +449,10 @@ static NSInteger potentialMinimumForArray(NSArray<NSNumber *> *array, NSInteger 
         
 			// set button frame
 			if (tabBarView.orientation == MMTabBarHorizontalOrientation) {
-				buttonRect.size.width = [[widths objectAtIndex:idx] doubleValue];
+				buttonRect.size.width = widths[idx].doubleValue;
 			} else {
 				buttonRect.size.width = tabBarView.frame.size.width;
-				buttonRect.origin.y = [[widths objectAtIndex:idx] doubleValue];
+				buttonRect.origin.y = widths[idx].doubleValue;
 				buttonRect.origin.x = 0;
 			}
 
@@ -468,7 +468,7 @@ static NSInteger potentialMinimumForArray(NSArray<NSNumber *> *array, NSInteger 
 
 			// next...
             if (tabBarView.orientation == MMTabBarHorizontalOrientation)
-                buttonRect.origin.x += [[widths objectAtIndex:idx] doubleValue];
+                buttonRect.origin.x += widths[idx].doubleValue;
             else
                 buttonRect.origin.y += buttonRect.size.height;
                 
@@ -601,7 +601,7 @@ static NSInteger potentialMinimumForArray(NSArray<NSNumber *> *array, NSInteger 
 		changed = NO;
 
 		for(NSInteger q = (count - 1); q >= 0; q--) {
-			CGFloat buttonWidth = [[newWidths objectAtIndex:q] doubleValue];
+			CGFloat buttonWidth = newWidths[q].doubleValue;
 			if (buttonWidth - 1 >= minimum) {
 				buttonWidth--;
 				totalWidths--;
