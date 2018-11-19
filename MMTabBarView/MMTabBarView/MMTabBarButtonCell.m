@@ -548,6 +548,8 @@ NS_ASSUME_NONNULL_BEGIN
 #else
 	if ([self.controlView window] == NSApp.mainWindow) {
 		[attrStr addAttribute:NSForegroundColorAttributeName value:NSColor.controlTextColor range:range];
+	} else if (@available(macOS 10.14, *)) {
+		[attrStr addAttribute:NSForegroundColorAttributeName value:NSColor.controlTextColor range:range];
 	} else {
 		[attrStr addAttribute:NSForegroundColorAttributeName value:NSColor.disabledControlTextColor range:range];
 	}
