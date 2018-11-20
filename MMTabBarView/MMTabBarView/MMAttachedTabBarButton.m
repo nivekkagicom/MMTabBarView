@@ -188,7 +188,7 @@ NS_ASSUME_NONNULL_BEGIN
     return draggingRect;
 }
 
-inline static NSBitmapImageRep* imageForView(NSView* const inView, NSRect const inBounds) {
+inline static NSBitmapImageRep* imageRepForView(NSView* const inView, NSRect const inBounds) {
 	if (@available(macOS 10.14, *)) {
 		NSBitmapImageRep* const imageRep = [inView bitmapImageRepForCachingDisplayInRect:inView.visibleRect];
 		[inView cacheDisplayInRect:inBounds toBitmapImageRep:imageRep];
@@ -206,7 +206,7 @@ inline static NSBitmapImageRep* imageForView(NSView* const inView, NSRect const 
         // assure that we will draw the tab bar contents correctly
     [self setFrame:self.stackingFrame];
 
-	NSBitmapImageRep* const imageRep = imageForView(self.tabBarView, self.draggingRect);
+	NSBitmapImageRep* const imageRep = imageRepForView(self.tabBarView, self.draggingRect);
 	NSImage* image = [[NSImage alloc] initWithSize:imageRep.size];
 	[image addRepresentation:imageRep];
 	NSImage* returnImage = [[NSImage alloc] initWithSize:imageRep.size];
