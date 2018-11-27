@@ -1046,21 +1046,30 @@ NS_ASSUME_NONNULL_BEGIN
     [icon drawInRect:iconRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0 respectFlipped:YES hints:nil];
 }
 
+inline static bool useShadow(NSView* const inView) {
+	if (@available(macOS 10.14, *)) {
+		return ![[inView.effectiveAppearance bestMatchFromAppearancesWithNames:@[NSAppearanceNameAqua, NSAppearanceNameDarkAqua]] isEqualToString:NSAppearanceNameDarkAqua];
+	}
+	return true;
+}
+
 - (void)_drawTitleWithFrame:(NSRect)frame inView:(NSView *)controlView {
 
     NSRect rect = [self titleRectForBounds:frame];
 
     [NSGraphicsContext saveGraphicsState];
-    
-    NSShadow *shadow = [[NSShadow alloc] init];
+
+	if (useShadow(controlView)) {
+		NSShadow *shadow = [[NSShadow alloc] init];
 #ifdef ORIGINAL_MMTABBAR_SAFARI_TAB_STYLE
-	[shadow setShadowColor:[NSColor.whiteColor colorWithAlphaComponent:0.4]];
+		[shadow setShadowColor:[NSColor.whiteColor colorWithAlphaComponent:0.4]];
 #else
-    [shadow setShadowColor:[NSColor.whiteColor colorWithAlphaComponent:0.6]];
+		[shadow setShadowColor:[NSColor.whiteColor colorWithAlphaComponent:0.6]];
 #endif
-	[shadow setShadowBlurRadius:1.0];
-    [shadow setShadowOffset:NSMakeSize(0.0, -1.0)];
-    [shadow set];
+		[shadow setShadowBlurRadius:1.0];
+		[shadow setShadowOffset:NSMakeSize(0.0, -1.0)];
+		[shadow set];
+	}
 
     // draw title
     [self.attributedStringValue drawInRect:rect];
