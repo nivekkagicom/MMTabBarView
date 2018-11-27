@@ -588,6 +588,9 @@ StaticImage(SafariIWITRightCap)
 
 -(void)drawBezelOfTabCell:(MMTabBarButtonCell *)cell withFrame:(NSRect)frame inView:(NSView *)controlView {
 
+	if (@available(macos 10.14, *)) {
+		return;
+	}
     if (cell.controlView.frame.size.height < 2)
         return;
 
@@ -597,9 +600,6 @@ StaticImage(SafariIWITRightCap)
     NSRect cellFrame = frame;
     
     cellFrame = NSInsetRect(cellFrame, -5.0, 0);
-    
-    if (cell.controlView.frame.size.height < 2)
-        return;
 
     NSImage *left = nil;
     NSImage *center = nil;
