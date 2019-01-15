@@ -400,7 +400,7 @@ static NSMutableDictionary<NSString*, Class <MMTabStyle>> *registeredStyleClasse
 
     [self _updateImages];
 
-	[self setNeedsDisplay:YES];
+	[self setNeedsUpdate:YES];
 }
 
 #pragma mark -
